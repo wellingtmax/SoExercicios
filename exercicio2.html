@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: black;
+        }
+
+        button {
+            padding: 20px;
+            border-radius: 10px;
+            background: white;
+            margin: 10px;
+            box-shadow: 2px 5px 20px black;
+        }
+
+        button:hover {
+            background: rgb(216, 213, 213);
+        }
+        #sob_tudo{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px;
+
+        }
+        #sob{
+            background: whitesmoke;
+            justify-items: center;
+            width: 500px;
+            height: 200px;
+            padding: 50px;
+            margin: 10px;
+        }
+        p{
+            background: black;
+            padding: 10px;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="sob_tudo">
+        <div id="sob">
+            <h3>Classificação por idade</h3>
+            <button onclick="ClassificacaoPorIdadeSwitch()">OK</button>
+            <p id="caixa">Resposta</p>
+        </div>
+        <div id="sob">
+            <h3>Controle de estoque com switch</h3>
+            <button onclick="ControledeEstoquecomRepetição()">OK</button>
+            <p id="caixa2">Resposta</p>
+        </div>
+        <div id="sob">
+            <h3>Validação de senha com repetição</h3>
+            <button onclick="ValidacaodeSenhaComrepeticao()">OK</button>
+            <p id="caixa3">Resposta</p>
+        </div>
+        <div id="sob">
+            <h3>Números primos em um intervalo</h3>
+            <button onclick="NumerosPrimosEmUmIntervalo()">OK</button>
+            <p id="caixa4">Resposta</p>
+        </div>
+        <div id="sob">
+            <h3>Simulador de fila de atendimento</h3>
+            <button onclick="SimuladorDeFilaDeatendimento()">OK</button>
+            <p id="caixa5">Resposta</p>
+        </div>
+        <div id="sob">
+            <h3>Simulador de pesquisa de satisfação</h3>
+            <button onclick="SimuladorDePesquisaDesatisfacao()">OK</button>
+            <p id="caixa6">Resposta</p>
+        </div>
+        <div id="sob">
+            <h3>Cálculo de média com múltiplas tentativas</h3>
+            <button onclick="CalculoDeMediaComMultiplastentativas()">OK</button>
+            <p id="caixa7">Resposta</p>
+        </div>
+        <div id="sob">
+            <h3>Análise de vendas com array e condições</h3>
+            <button onclick="AnalisedeVendasComArrayeCondições()">OK</button>
+            <p id="caixa8">Resposta</p>
+        </div>
+        <div id="sob">
+            <h3>Verificar se um número está na lista</h3>
+            <button onclick="VerificarSeUmNumeroEstáNalista()">OK</button>
+            <p id="caixa9">Resposta</p>
+        </div>
+        <div id="sob">
+            <h3>Simulador de caixa eletrônico</h3>
+            <button onclick="SimuladorDeCaixaEletronico()">OK</button>
+            <p id="caixa10">Resposta</p>
+        </div>
+    </div>
+    <script src="exercicio2.js"></script>
+</body>
+
+</html>
