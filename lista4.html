@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: left;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        p {
+            font-size: 16px;
+            color: #2c3e50;
+        }
+        #result, #capitalResult, #evenOddResult, #divisibleResult, #averageResult,
+        #differenceResult, #integerRangeResult, #numberCheckResult, #divisorResult,
+        #hundredsResult, #minMaxResult, #sortedResult {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        #result, #capitalResult, #evenOddResult, #divisibleResult, #averageResult,
+        #differenceResult, #integerRangeResult, #numberCheckResult, #divisorResult,
+        #hundredsResult, #minMaxResult, #sortedResult {
+            color: #27ae60; /* Green for results */
+        }
+        #result.error, #capitalResult.error, #evenOddResult.error, #divisibleResult.error,
+        #averageResult.error, #differenceResult.error, #integerRangeResult.error,
+        #numberCheckResult.error, #divisorResult.error, #hundredsResult.error,
+        #minMaxResult.error, #sortedResult.error {
+            color: #e74c3c; /* Red for error messages */
+        }
+      
+        button {
+            display: block;
+            margin: 10px auto;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        footer {
+            bottom: 0;
+            width: 100%;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        footer p {
+            color: #ecf0f1;
+            margin: 5px 0;
+        }
+        footer p a {
+            color: #ecf0f1;
+        }
+    </style>
+</head>
+<body>
+<!-- ===========================================1================================================     -->
+
+    <h1>Lista 4 - Exercícios de Lógica de Programação</h1>
+    <!-- 1) Desenvolver um programa que pergunte um número. Se este número for maior que 20, 
+então ele deverá exibir a metade deste número, senão, ele deverá exibir o número sem 
+alterações. -->
+<h1>pergunte um número</h1>
+<input type="text" id="numberInput" placeholder="Digite um número">
+<button onclick="checkNumber()">Verificar Número</button>
+<p id="result"></p>
+<!-- ============================================2================================================     -->
+<!-- 2) Desenvolver um programa que permita ao aluno responder qual a capital do Brasil. O 
+programa deverá exibir se a resposta está certa ou errada. -->
+<h1>Qual é a capital do Brasil?</h1>
+<input type="text" id="capitalInput" placeholder="Qual é a capital do Brasil?">
+<button onclick="checkCapital()">Verificar Capital</button>
+<p id="capitalResult"></p>
+<!-- ============================================3================================================     -->
+<!-- 3) Desenvolver um programa que pergunte um número, e apresente como resposta se o 
+referido número é par ou é ímpar. -->
+<h1>Verificar Par ou Ímpar</h1>
+<input type="text" id="evenOddInput" placeholder="Digite um número">
+<button onclick="checkEvenOdd()">Verificar Par ou Ímpar</button>
+<p id="evenOddResult"></p>
+<!-- ============================================4================================================     -->
+<!-- 4) Desenvolver um programa que pergunte um valor numérico inteiro e faça a exibição desse 
+valor caso seja divisível por 4 e 5. Não sendo divisível por 4 e 5, o programa deverá exibir a 
+mensagem “Valor não é divisível por 4 e 5”. -->
+<h1>Verificar Divisibilidade por 4 e 5</h1>
+<input type="text" id="divisibleInput" placeholder="Digite um número inteiro">
+<button onclick="checkDivisibility()">Verificar Divisibilidade</button>
+<p id="divisibleResult"></p>
+<!-- ============================================5================================================     -->
+<!-- 5) Desenvolver um programa que pergunte 4 notas escolares de um aluno e exiba mensagem 
+informando que o aluno foi aprovado se a média escolar for maior ou igual a 5. Se o aluno não 
+foi aprovado, indicar uma mensagem informando essa condição. Apresentar junto com a 
+mensagem de aprovação ou reprovação o valor da média obtida pelo aluno. -->
+<h1>Calcular Média Escolar</h1>
+
+<input type="text" id="grade1" placeholder="Digite a primeira nota">
+<input type="text" id="grade2" placeholder="Digite a segunda nota">
+<input type="text" id="grade3" placeholder="Digite a terceira nota">
+<input type="text" id="grade4" placeholder="Digite a quarta nota">
+<button onclick="calculateAverage()">Calcular Média</button>
+<p id="averageResult"></p>
+<!-- ============================================6================================================     -->
+<!-- 6) Desenvolver um programa que pergunte dois valores numéricos inteiros e apresente o valor 
+da diferença entre o maior valor e o menor valor lido. -->
+<h1>Calcular Diferença entre Maior e Menor Valor</h1>
+<input type="text" id="num1" placeholder="Digite o primeiro número">
+<input type="text" id="num2" placeholder="Digite o segundo número">
+<button onclick="calculateDifference()">Calcular Diferença</button>
+<p id="differenceResult"></p>
+<!-- ============================================7================================================     -->
+<!-- 7) Desenvolver um programa que pergunte um valor inteiro positivo ou negativo, e exiba como 
+resposta o módulo deste valor, ou seja, o número lido como sendo positivo. -->
+<!-- 8) Desenvolver um programa que pergunte um número inteiro qualquer e verifique se ele está 
+na faixa de 1 a 10. -->
+<h1>Calcular Módulo de um Número</h1>
+<input type="text" id="integerInput" placeholder="Digite um número inteiro">
+<button onclick="checkIntegerRange()">Verificar Faixa de 1 a 10</button>
+<p id="integerRangeResult"></p>
+<!-- ============================================9================================================     -->
+<!-- 9) Desenvolver um programa que pergunte um número e exiba a informação de que ele é 
+positivo, negativo ou nulo. -->
+<h1>Verificar Sinal do Número</h1>
+<input type="text" id="numberCheckInput" placeholder="Digite um número">
+<button onclick="checkNumberSign()">Verificar Sinal do Número</button>
+<p id="numberCheckResult"></p>
+<!-- ============================================10================================================     -->
+<!-- 10) Desenvolver um programa que pergunte dois números inteiros, e apresente como 
+resultado se o segundo número informado é ou não um divisor do primeiro número 
+informado. -->
+<h1>Verificar Divisor</h1>
+<input type="text" id="firstNumber" placeholder="Digite o primeiro número">
+<input type="text" id="secondNumber" placeholder="Digite o segundo número">
+<button onclick="checkDivisor()">Verificar Divisor</button>
+<p id="divisorResult"></p>
+<!-- ============================================11================================================     -->
+<!-- 11) Desenvolver um programa que pergunte um número de 3 casas e apresente como 
+resultado somente o algarismo das centenas. -->
+<h1>Extrair Algarismo das Centenas</h1>
+<input type="text" id="threeDigitNumber" placeholder="Digite um número de 3 casas">
+<button onclick="extractHundreds()">Extrair Algarismo das Centenas</button>
+<p id="hundredsResult"></p>
+<!-- ============================================12================================================     -->
+<!-- 12) Desenvolver um programa que pergunte 5 números inteiros e identifique o maior número e 
+o menor número. -->
+<h1>Encontrar Maior e Menor Número</h1>
+<input type="text" id="num1Input" placeholder="Digite o primeiro número">
+<input type="text" id="num2Input" placeholder="Digite o segundo número">
+<input type="text" id="num3Input" placeholder="Digite o terceiro número">
+<input type="text" id="num4Input" placeholder="Digite o quarto número">
+<input type="text" id="num5Input" placeholder="Digite o quinto número">
+<button onclick="findMinMax()">Encontrar Maior e Menor Número</button>
+<p id="minMaxResult"></p>
+<!-- ============================================13================================================     -->
+<!-- 13) Desenvolver um programa que pergunte 3 valores (variáveis a, b e c) e ao final apresente-os dispostos em ordem crescente -->
+<h1>Ordenar 3 Valores</h1>
+<input type="text" id="valueA" placeholder="Digite o valor de A">
+<input type="text" id="valueB" placeholder="Digite o valor de B">
+<input type="text" id="valueC" placeholder="Digite o valor de C">
+<button onclick="sortValues()">Ordenar Valores</button>
+<p id="sortedResult"></p>
+    
+    <footer>
+      <p>Para ver la lista 1, <a href="lista1.html">click aquí</a>.</p>
+      <p>Para ver la lista 2, <a href="lista3.html">click aquí</a>.</p>
+      <p>Para ver la lista 3, <a href="lista4.html">click aquí</a>.</p>
+      <p>Para ver la lista 4, <a href="exercicio2.html">click aquí</a>.</p>
+      <p>Para ver la lista 5, <a href="lista2.html">click aquí</a>.</p>
+    </footer>
+
+    <script src="lista4.js"></script>
+</body>
+</html>

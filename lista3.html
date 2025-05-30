@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+     
+        input, button {
+            padding: 10px;
+            margin: 5px 0;
+            width: calc(100% - 22px);
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        p {
+            width: 97%;
+            padding: 10px;
+            background-color: #ecf0f1;
+            border: 1px solid #bdc3c7;
+            color: #000000;
+            font-size: 16px;
+        }
+        #resultadoAreaCirculo, #resultadoSalarioLiquido, #resultadoValores,
+        #resultadoMediaPonderada, #resultadoVolumeLata, #resultadoTroca,
+        #resultadoHipotenusa, #resultadoRetangulo, #resultadoDecimoTermoPA,
+        #resultadoQuintoTermoPG {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        footer p {
+            color: #06303a;
+            margin: 5px 0;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+        }
+        footer a {
+            color: #19c1eb;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+<h1>Lista 3 de Exercícios</h1>
+<!-- ----------------------------1-------------------------------------------------- -->
+<!-- 1) Elaborar um programa de computador que pergunte ao usuário o valor do Raio de um 
+círculo e calcule a área do referido círculo, apresentando o resultado deste cálculo.
+Obs: A fórmula da área é a = πr². Considere o valor de π = 3. 14159265. -->
+<h1>o valor do Raio de um círculo</h1>
+<input type="number" name="raio" id="raioPi" placeholder="Digite o valor do Raio">
+<button onclick="calcularAreaCirculo()">Calcular Área do Círculo</button>
+<p id="resultadoAreaCirculo"></p>
+
+
+<!-- ---------------------------------2------------------------------------------ -->
+<!-- 2) Desenvolver um programa que calcule o salário líquido de um professor. Para elaborar o 
+programa, é necessário possuir alguns dados, tais como: Valor da hora aula, número de horas 
+trabalhadas no mês e percentual de desconto do INSS. -->
+
+<h1>Calcular Salário Líquido de um Professor</h1>
+<input type="text" id="valorHoraAula" placeholder="Valor da Hora Aula">
+<input type="number" id="numeroHorasTrabalhadas" placeholder="Número de Horas Trabalhadas">
+<input type="number" id="percentualINSS" placeholder="Percentual de Desconto do INSS">
+<button onclick="calcularSalarioLiquido()">Calcular Salário Líquido</button>
+<p id="resultadoSalarioLiquido"></p>
+<!-- ---------------------------------3------------------------------------------ -->
+<!-- 3) Fazer um programa que pergunte dois valores reais e apresente o primeiro com acréscimo 
+de 30% e o segundo com desconto de 25%. -->
+<h1>Calcular Valores com Acréscimo e Desconto</h1>
+<input type="number" id="valor1" placeholder="Digite o primeiro valor">
+<input type="number" id="valor2" placeholder="Digite o segundo valor">
+<button onclick="calcularValores()">Calcular Valores</button>
+<p id="resultadoValores"></p>
+
+<!-- ---------------------------------4------------------------------------------ -->
+<!-- 4) Fazer um algoritmo que pergunte 4 números e apresente a média aritmética ponderada, 
+com pesos respectivos de 1, 2, 3 e 4.
+Obs: Sabe-se que o cálculo da média aritmética ponderada (mp) é feito da seguinte forma:
+mp = ( (num1 x peso1) + (num2 x peso2) + (num3 x peso3) + (num4 x peso4) ) / (peso1 + 
+peso2 + peso3 + peso4) -->
+
+<h1>Calcular Média Aritmética Ponderada</h1>
+<input type="number" id="num1" placeholder="Digite o primeiro número">
+<input type="number" id="num2" placeholder="Digite o segundo número">
+<input type="number" id="num3" placeholder="Digite o terceiro número">
+<input type="number" id="num4" placeholder="Digite o quarto número">
+<button onclick="calcularMediaPonderada()">Calcular Média Ponderada</button>
+<p id="resultadoMediaPonderada"></p>
+<!-- ---------------------------------5------------------------------------------ -->
+
+<!-- 5) Fazer um algoritmo que calcule e apresente o valor do volume de uma lata de óleo, 
+utilizando a fórmula v = πr2h. Onde v=Volume, π = 3. 14159265, r = raio e h = altura. -->
+
+<h1>Calcular Volume de uma Lata de Óleo</h1>
+<input type="number" id="raioLata" placeholder="Digite o Raio da Lata">
+<input type="number" id="alturaLata" placeholder="Digite a Altura da Lata">
+<button onclick="calcularVolumeLata()">Calcular Volume</button>
+<p id="resultadoVolumeLata"></p>
+<!-- ---------------------------------6------------------------------------------ -->
+<!-- 6) Fazer um algoritmo que pergunte dois valores a e b, efetue a troca dos valores, de forma que 
+a variável "a" passe a possuir o valor da variável "b", e que a variável "b" passe a possuir o 
+valor da variável "a", e apresente os valores trocados. -->
+<h1>Trocar Valores de Variáveis</h1>
+<input type="number" id="valorA" placeholder="Digite o valor de A"> 
+<input type="number" id="valorB" placeholder="Digite o valor de B">
+<button onclick="trocarValores()">Trocar Valores</button>
+<p id="resultadoTroca"></p>
+
+<!-- ---------------------------------7------------------------------------------ -->
+<!-- 7) Fazer um algoritmo que pergunte os valores dos catetos de um triângulo retângulo e 
+apresente o valor da hipotenusa.
+Obs: A fórmula é hipotenusa² = cateto1² + cateto2² ou, se preferir, hipotenusa = √( cateto1² + 
+cateto2²). -->
+<h1>Calcular Hipotenusa de um Triângulo Retângulo</h1>
+<input type="number" id="cateto1" placeholder="Digite o valor do Cateto 1">
+<input type="number" id="cateto2" placeholder="Digite o valor do Cateto 2">
+<button onclick="calcularHipotenusa()">Calcular Hipotenusa</button>
+<p id="resultadoHipotenusa"></p>
+<!-- ---------------------------------8------------------------------------------ -->
+<!-- 8) Fazer um algoritmo que pergunte a base e a altura de um retângulo, e apresente:
+a) O perímetro deste retângulo
+b) A área deste retângulo
+c) A diagonal deste retângulo
+Eis as fórmulas:
+perímetro = Soma de todos os lados do retângulo.
+área = Base x Altura
+diagonal² = base² + altura² ou, se preferir, diagonal = √(base² + altura²). -->
+<h1>Calcular Propriedades de um Retângulo</h1>
+<input type="number" id="baseRetangulo" placeholder="Digite a Base do Retângulo">
+<input type="number" id="alturaRetangulo" placeholder="Digite a Altura do Retângulo">
+<button onclick="calcularRetangulo()">Calcular Propriedades</button>
+<p id="resultadoRetangulo"></p>
+
+<!-- ---------------------------------9------------------------------------------ -->
+<!-- 9) Fazer um algoritmo que solicite a razão de uma pa (Progressão Aritmética) e o valor do 1º
+termo. E apresente o 10º termo da série. -->
+<h1>Calcular o 10º Termo de uma Progressão Aritmética (PA)</h1>
+<input type="number" id="razaoPA" placeholder="Digite a Razão da PA">
+<input type="number" id="primeiroTermoPA" placeholder="Digite o 1º Termo da PA">
+<button onclick="calcularDecimoTermoPA()">Calcular 10º Termo</button>
+<p id="resultadoDecimoTermoPA"></p>
+
+<!-- ---------------------------------10------------------------------------------ -->
+<!-- 10) Fazer um algoritmo que solicite a razão de uma pg (Progressão Geométrica) e o valor do 1º 
+termo. E apresente o 5º termo da série -->
+<h1>Calcular o 5º Termo de uma Progressão Geométrica (PG)</h1>
+<input type="number" id="razaoPG" placeholder="Digite a Razão da PG">
+<input type="number" id="primeiroTermoPG" placeholder="Digite o 1º Termo da PG">
+<button onclick="calcularQuintoTermoPG()">Calcular 5º Termo</button>
+<p id="resultadoQuintoTermoPG"></p>
+
+
+    <footer>
+      <p>Para ver la lista 1, <a href="lista1.html">click aquí</a>.</p>
+      <p>Para ver la lista 2, <a href="lista3.html">click aquí</a>.</p>
+      <p>Para ver la lista 3, <a href="lista4.html">click aquí</a>.</p>
+      <p>Para ver la lista 4, <a href="exercicio2.html">click aquí</a>.</p>
+      <p>Para ver la lista 5, <a href="lista2.html">click aquí</a>.</p>
+    </footer>
+
+
+    <script src="lista3.js"></script>
+</body>
+</html>

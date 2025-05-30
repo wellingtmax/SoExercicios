@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="number"],
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        p {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #dff0d8;
+        border: 1px solid #d6e9c6;
+        border-radius: 5px;
+      }
+        div#resultadoOperacoes,
+        div#resultadoPesoAltura,
+        div#resultadoIMC,
+        div#resultadoSalarioVendedor,
+        div#resultadoPrestacoes,
+        div#resultadoPrecoVenda,
+        div#resultadoIdadeDias,
+        div#resultadoVotos {
+            background-color: #ecf0f1;
+            padding: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+      footer {
+        background-color: #2c3e50;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+      }
+      footer p {
+       margin: 5px 0;
+        color: white;
+      }
+      footer a {
+        color: #00ccff;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+      div#total {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #dff0d8;
+        border: 1px solid #d6e9c6;
+        border-radius: 5px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Lista 2</h1>
+    <h1>Calculadora de Gorjeta (10%)</h1>
+    <label for="valorConta">Valor da conta (R$):</label>
+    <input type="number" id="valorConta" step="0.01" min="0" />
+
+    <button onclick="calcularTotal()">Calcular Total com Gorjeta</button>
+
+    <div id="total"></div>
+    <!-- ================================================================ -->
+    <h1>Calculadora de Minutos</h1>
+    <label for="horas">Horas:</label>
+    <input type="number" id="horas" min="0" max="23" />
+    <label for="minutos">Minutos:</label>
+    <input type="number" id="minutos" min="0" max="59" />
+    <button onclick="calcularMinutos()">Calcular Minutos</button>
+    <p id="resultadoMinutos"></p>
+    <!-- ================================================================ -->
+
+    <label for="peso">Peso (kg):</label>
+    <input type="number" id="peso" step="0.01" min="0" />
+    <label for="altura">Altura (m):</label>
+    <input type="number" id="altura" step="0.01" min="0" />
+    <button onclick="calcularPesoAltura()">Calcular</button>
+    <p id="resultadoPesoAltura"></p>
+    <!-- ================================================================ -->
+    <!-- ================================================================ -->
+    <h1>Calculadora de IMC</h1>
+    <label for="pesoIMC">Peso (kg):</label>
+    <input type="number" id="pesoIMC" step="0.01" min="0" />
+    <label for="alturaIMC">Altura (m):</label>
+    <input type="number" id="alturaIMC" step="0.01" min="0" />
+    <button onclick="calcularIMC()">Calcular IMC</button>
+    <p id="resultadoIMC"></p>
+    <!-- ================================================================ -->
+    <h1>Operações Matemáticas</h1>
+    <label for="numero1">Número 1:</label>
+    <input type="number" id="numero1" step="0.01" min="0" />
+    <label for="numero2">Número 2:</label>
+    <input type="number" id="numero2" step="0.01" min="0" />
+    <button onclick="calcularOperacoes()">Calcular Operações</button>
+    <div id="resultadoOperacoes"></div>
+    <!-- ================================================================ -->
+    
+    <h1>Salário do Vendedor</h1>
+    <label for="nomeVendedor">Nome do Vendedor:</label>
+    <input type="text" id="nomeVendedor" />
+    <label for="salarioFixo">Salário Fixo (R$):</label>
+    <input type="number" id="salarioFixo" step="0.01" min="0" />
+    <label for="totalVendas">Total de Vendas (R$):</label>
+    <input type="number" id="totalVendas" step="0.01" min="0" />
+    <button onclick="calcularSalarioVendedor()">Calcular Salário</button>
+    <div id="resultadoSalarioVendedor"></div>
+    <!-- ================================================================ -->
+    <h1>Conversor de Temperatura</h1>
+    <label for="valorCompra">Valor da Compra (R$):</label>  
+    <input type="number" id="valorCompra" step="0.01" min="0" />
+    <label for="numeroPrestacoes">Número de Prestações:</label>
+    <input type="number" id="numeroPrestacoes" min="1" max="10" />
+    <button onclick="calcularPrestacoes()">Calcular Prestações</button>
+    <div id="resultadoPrestacoes"></div>
+    <!-- ================================================================ -->
+    <h1>Calculadora de Preço de Venda</h1>
+    <label for="precoCusto">Preço de Custo (R$):</label>    
+    <input type="number" id="precoCusto" step="0.01" min="0" />
+    <label for="percentualAcrescimo">Percentual de Acréscimo (%):</label>
+    <input type="number" id="percentualAcrescimo" step="0.01" min="0" />
+    <button onclick="calcularPrecoVenda()">Calcular Preço de Venda</button>
+    <div id="resultadoPrecoVenda"></div>
+    <!-- ================================================================ -->
+    <h1>Conversor de Idade para Dias</h1>
+    <label for="anos">Anos:</label>
+    <input type="number" id="anos" min="0" />
+    <label for="meses">Meses:</label>
+    <input type="number" id="meses" min="0" />
+    <label for="dias">Dias:</label>
+    <input type="number" id="dias" min="0" />
+    <button onclick="converterIdadeParaDias()">Converter Idade para Dias</button>
+    <div id="resultadoIdadeDias"></div>
+    <!-- ================================================================ -->
+    <h1>Votos em Eleições</h1>
+    <label for="totalEleitores">Total de Eleitores:</label>
+    <input type="number" id="totalEleitores" min="0" />
+    <label for="votosBrancos">Votos Brancos:</label>
+    <input type="number" id="votosBrancos" min="0" />
+    <label for="votosNulos">Votos Nulos:</label>
+    <input type="number" id="votosNulos" min="0" />
+    <label for="votosValidos">Votos Válidos:</label>
+    <input type="number" id="votosValidos" min="0" />
+    <button onclick="calcularVotos()">Calcular Percentuais</button>
+    <div id="resultadoVotos"></div>
+    <!-- ================================================================ -->
+
+    <footer>
+      <p>Para ver la lista 1, <a href="lista1.html">click aquí</a>.</p>
+      <p>Para ver la lista 2, <a href="lista3.html">click aquí</a>.</p>
+      <p>Para ver la lista 3, <a href="lista4.html">click aquí</a>.</p>
+      <p>Para ver la lista 4, <a href="exercicio2.html">click aquí</a>.</p>
+      <p>Para ver la lista 5, <a href="lista2.html">click aquí</a>.</p>
+    </footer>
+    <script src="lista2.js"></script>
+  </body>
+</html>

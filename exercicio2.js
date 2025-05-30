@@ -22,7 +22,7 @@ function ClassificacaoPorIdadeSwitch() {
     }
 }
 
-function ControledeEstoquecomRepetição(){
+function ControledeEstoquecomRepetição() {
     let estoque = [];
     let continuar = true;
 
@@ -43,7 +43,7 @@ function ControledeEstoquecomRepetição(){
     resposta1.innerHTML = "Estoque: <br>" + estoque.map(item => `${item.produto}: ${item.quantidade}`).join("<br>");
 }
 
-function ValidacaodeSenhaComrepeticao(){
+function ValidacaodeSenhaComrepeticao() {
     let senhaCorreta = "123456";
     let tentativas = 0;
     let senha;
@@ -60,7 +60,7 @@ function ValidacaodeSenhaComrepeticao(){
     } while (tentativas < 3);
 }
 
-function NumerosPrimosEmUmIntervalo(){
+function NumerosPrimosEmUmIntervalo() {
     let inicio = Number(prompt("Digite o início do intervalo:"));
     let fim = Number(prompt("Digite o fim do intervalo:"));
     let resposta4 = document.getElementById("caixa4");
@@ -88,7 +88,7 @@ function NumerosPrimosEmUmIntervalo(){
     resposta4.innerHTML = "Números primos no intervalo: " + primos.join(", ");
 }
 
-function SimuladorDeFilaDeatendimento(){
+function SimuladorDeFilaDeatendimento() {
     let fila = [];
     let continuar = true;
 
@@ -116,7 +116,7 @@ function SimuladorDePesquisaDesatisfacao() {
     let ruim = 0;
     let regular = 0;
     let otimo = 0;
-    
+
     // Coletar as 10 notas
     for (let i = 1; i <= 10; i++) {
         let nota;
@@ -124,7 +124,7 @@ function SimuladorDePesquisaDesatisfacao() {
         do {
             nota = parseInt(prompt(`Digite a nota do cliente ${i} (0 a 10):`));
         } while (isNaN(nota) || nota < 0 || nota > 10);
-        
+
         // Classifica a nota
         if (nota >= 0 && nota <= 4) {
             ruim++;
@@ -144,19 +144,26 @@ function SimuladorDePesquisaDesatisfacao() {
     `;
 }
 
-function CalculoDeMediaComMultiplastentativas(){
-    let Aprovado = 0;
-    let Reprovado = 0;
-    let nome = prompt("Digite nome do alunoª");
+function CalculoDeMediaComMultiplastentativas() {
 
-    for(let i = 1; i <= 3; i++){
-        let nota;
-        let nota1;
-        
-        do{
-            nota = parseInt(prompt(`Digite a nota ${i} do alunoª ${nome}  (0 a 10):`));
-        } while (isNaN(nota) || nota < 0 || nota > 10)
-        
-
+    let alunos = []
+    for (let i = 0; i < 5; i++) {
+        let nome = prompt("Digite o nome do aluno " + (i + 1));
+        let nota1 = parseFloat(prompt(`Digite a nota 1º do aluno` + (i + 1)));
+        let nota2 = parseFloat(prompt("Digite a nota 2º do aluno " + (i + 1)));
+        let nota3 = parseFloat(prompt("Digite a nota 2º do aluno " + (i + 1)));
+        alunos.push({ nome: nome, nota1: nota1, nota2: nota2, nota3: nota3 });
     }
+
+    //let resultado7 = document.getElementById("caixa7");
+
+    alunos.forEach(function (aluno) {
+        aluno.media = (aluno.nota1 + aluno.nota2 + aluno.nota3) / 3;
+        resultado7.innerHTML = `<h3>Resultado final das notas:</h3>
+        <p>Aprovado media: ${i} </p>
+        <p>Reprovado media: ${i} </p>`;
+    })
+
+    
 }
+
