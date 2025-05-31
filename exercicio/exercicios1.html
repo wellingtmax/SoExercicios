@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            background: rgb(223, 221, 221);
+        }
+
+        div {
+            justify-items: center;
+            width: 600px;
+            padding: 20px;
+            margin: 5px;
+            background: white;
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: rgb(196, 183, 183);
+            color: white;
+        }
+
+        input {
+            padding: 10px;
+        }
+
+        p {
+            padding: 10px;
+            margin: 10px;
+            background: rgb(196, 183, 183);
+        }
+
+        #dollarPriceDisplay {
+            padding: 10px;
+            margin: 10px;
+            background: rgba(86, 228, 73, 0.212);
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        #valorInteiro,
+        #valorInteiro2,
+        #valorInteiro3,
+        #valorInteiro4 {
+            width: 70px;
+        }
+
+        #mediaAritimetica1,
+        #mediaAritimetica2,
+        #mediaAritimetica3 {
+            width: 70px;
+        }
+
+        #distanciaPercorrida,
+        #kmPorLitro,
+        #precoLitro {
+            width: 70px;
+        }
+
+        #prestacao,
+        #juros,
+        #tempoEmDias {
+            width: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Digite seu nome/ sexo</h1>
+        <input type="text" id="nomeUsuario" placeholder="Digite seu nome:">
+        <input type="text" id="sexoUsuario" placeholder="Digite seu Sexo:">
+        <button onclick="usuario()">Verificar</button>
+        <p id="resposta"></p>
+    </div>
+    <div>
+        <h1>Valor Inteiro</h1>
+        <input type="number" id="valorInteiro" placeholder="Digite o 1º!">
+        <input type="number" id="valorInteiro2" placeholder="Digite o 2º!">
+        <input type="number" id="valorInteiro3" placeholder="Digite o 3º!">
+        <input type="number" id="valorInteiro4" placeholder="Digite o 4º!">
+        <button onclick="valor()">Verificar</button>
+        <p id="resposta1"></p>
+    </div>
+    <div>
+        <h1>Conversor de Dólar</h1>
+        <p id="dollarPriceDisplay"></p>
+        <input type="number" id="Dollar" placeholder="Digite o valor em Reais">
+        <button onclick="dollar()">Verificar</button>
+        <p id="resposta2"></p>
+    </div>
+    <div>
+        <h1>Antecessor e seu Sucessor</h1>
+        <input type="text" id="antecessor_sucessor" placeholder="Digite um número">
+        <button onclick="antSuce()">Verificar</button>
+        <p id="resposta3"></p>
+    </div>
+    <div>
+        <h1>Salario</h1>
+        <input type="text" id="salario">
+        <button onclick="salario()">Verificar</button>
+        <p id="resposta4"></p>
+    </div>
+    <div>
+        <h1>Media</h1>
+        <input type="text" id="media1">
+        <input type="text" id="media2">
+        <button onclick="media()">Verificar</button>
+        <p id="resposta5"></p>
+    </div>
+    <div>
+        <h1>Media aritimética</h1>
+        <input type="text" id="mediaAritimetica1">
+        <input type="text" id="mediaAritimetica2">
+        <input type="text" id="mediaAritimetica3">
+        <button onclick="mediaAri()">Verificar</button>
+        <p id="resposta6"></p>
+    </div>
+    <div>
+        <h1>Quantidade de litros</h1>
+        <label for="distancia">Distancia</label>
+        <input type="text" id="distanciaPercorrida">
+        <label for="">KM</label>
+        <input type="text" id="kmPorLitro">
+        <label for="">Preço</label>
+        <input type="text" id="precoLitro">
+        <button onclick="qtLitros()">Verificar</button>
+        <p id="resposta7"></p>
+    </div>
+    <div>
+        <h1>Cálculo de Prestação em Atraso</h1>
+
+        <label for="valorOriginal">Valor Original da Prestação (R$):</label>--
+        <input type="number" id="valorOriginal" placeholder="Ex: 1000" min="0">
+        <br><br>
+
+        <label for="taxaJuros">Taxa de Juros ao Dia (%):</label>-----------
+        <input type="number" id="taxaJuros" placeholder="Ex: 0.1" min="0" step="0.01">
+        <br><br>
+
+        <label for="tempoAtraso">Tempo em Dias de Atraso:</label>----------
+        <input type="number" id="tempoAtraso" placeholder="Ex: 30" min="0">
+        <br><br>
+
+        <button onclick="calcularPrestacaoAtraso()">Calcular</button>
+
+        <p id="resultadoPrestacao"></p>
+    </div>
+    <div>
+        <h1>Quadrado</h1>
+        <input type="text" id="numero">
+        <button onclick="calculoQuadradoRaiz()">Verificar</button>
+        <p id="resposta9"></p>
+    </div>
+
+
+    <script src="exercicios2.js"></script>
+</body>
+
+</html>
