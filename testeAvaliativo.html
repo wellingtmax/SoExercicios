@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            align-items: center;
+            justify-items: center;
+        }
+        #container{
+            width: 100%;
+            display: grid;
+            grid: repeat(10, 150px) / auto-flow 50%;
+            border: solid;
+        }
+        #contaider > div{
+            justify-content: center;
+            padding: 10px;
+            margin: 20px;
+        }
+          div p{
+            justify-items: center;
+            align-items: center;
+            width: 100%;
+            border: solid white;
+            color: white;
+        }
+        div button{
+            justify-items: center;
+            width: 100%;
+            height: 40px;
+            margin: 5px;
+            border-radius: 20px;
+            box-shadow:  5px 5px  black;
+        }
+
+        button:hover{
+            background: rgb(216, 212, 212);
+            cursor: pointer;
+        }
+
+        p{
+            margin: px;
+            padding: 10px;
+            background: black;
+        }
+     
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div><button onclick="calculadoraAvancada()">Classificar</button></div>
+        <p id="classificar"></p>
+        <div><button onclick="classificarIdade()">Tabuada</button></div>
+        <p id="tab"></p>
+        <div><button onclick="tabuadaPersonalizada()">Somar Pares</button></div>
+        <p id="somar"></p>
+        <div><button onclick="somaParesWhile()">Validação de Pares</button></div>
+        <p id="val"></p>
+        <div><button onclick="validaSenha()">Validação de Senha</button></div>
+        <p id="val_senha"></p>
+        <div><button onclick="calcularFatorial()">Caucular Fatorial</button></div>
+        <p id="caul_fator"></p>
+        <div><button onclick="verificarPrimo()">Verificar primos</button></div>
+        <p id="veri_primo"></p>
+        <div><button onclick="mediaAritmetica()">Media</button></div>
+        <p id="mediana"></p>
+        <div><button onclick="contadorRegressivo()">Contador</button></div>
+        <p id="contar"></p>
+        <div><button onclick="verificarMulti()">Verificação de Multiplos</button></div>
+        <p id="veri_multi"></p>
+    </div>
+
+    <script src="tesAvaliativo.js"></script>
+</body>
+</html>
