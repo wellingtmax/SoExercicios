@@ -206,3 +206,4 @@ function fibonacci(n) {
 let n = 10;
 console.log(`O ${n}º termo da sequência de Fibonacci é: ${fibonacci(n)}
 a sequencia é: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...`);
+//================================================================================
