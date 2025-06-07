@@ -1,0 +1,160 @@
+/* =========================================================================== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("img/v748-toon-103.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #000;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background: white;
+}
+
+header h1 {
+  margin: 0;
+  margin-left: 80px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+nav{
+    margin-right: 300px;
+}
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+/* =========================================================================== */
+
+#inicio {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+#inicio .texto {
+  max-width: 50%;
+}
+
+#inicio .destaque {
+  color: rgb(40, 133, 255);
+}
+
+.icones img {
+  width: 50px;
+  margin-right: 30px;
+  transition: all ease-in-out 0.1ms;
+}
+
+.icones img:hover{
+    transform: scale(1.2);
+    filter: drop-shadow(0 2px 5px rgba(0, 4, 255, 0.822));
+}
+
+.botao {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: ease-out 0.1ms;
+}
+
+.botao:hover{
+    transform: scale(1.2);
+    filter: drop-shadow(0 2px 5px rgba(6, 72, 255, 0.808));
+}
+
+#inicio .imagem img {
+  width: 300px;
+}
+
+#sobre {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+}
+
+.l{
+    font-size: 1.4rem;
+    color: rgb(255, 115, 0);
+}
+
+#sobre .coluna {
+  width: 40%;
+}
+
+.destaque-sobre {
+  color:  rgb(68, 98, 231);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.destaque{
+    color: rgb(255, 136, 0);
+    font-size: 2rem;
+}
+
+.lu-stilo li{
+    text-decoration: none;
+}
+/* =========================================================================== */
+
+.destaque-contato{
+    color: rgb(0, 97, 187);
+    font-size: 2rem;
+}
+
+#contato {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+label{
+    text-align: left;
+}
+
+form input, form textarea {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+}
+
+form button {
+  padding: 10px;
+  background-color: lightgray;
+  border: none;
+  cursor: pointer;
+  width: 525px;
+  box-shadow: 1px 1px 6px rgb(107, 85, 85);
+}
+
+form button:hover {
+  background-color: rgb(241, 144, 144);
+  color: white;
+  
+}
+

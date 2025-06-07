@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Contato</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>PORTFÓLIO</h1>
+    <nav>
+      <a href="index.html">INÍCIO</a>
+      <a href="sobre.html">SOBRE MIM</a>
+    </nav>
+  </header>
+
+  <main id="contato">
+    <h2 class="destaque-contato">Você pode me enviar uma mensagem!</h2>
+    <p>Preencha o seu nome, seu e-mail e escreva a mensagem que deseja enviar para mim. Logo quando eu puder, irei de responder.</p>
+    <p>Desde já, agradeço o seu contato!</p>
+
+    <form id="form-contato">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
