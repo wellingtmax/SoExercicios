@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portifolio</title>
+    <link rel="stylesheet" href="portifolio.css">
+</head>
+
+<body>
+    <header>
+        <h1>Meu Portifolio!</h1>
+        <ul>
+            <a href="portifolio.html">
+                <li>Inicio</li>
+            </a>
+            <a href="Sobre.html">
+                <li>Quem sou eu!</li>
+            </a>
+            <a href="hobbie.html">
+                <li>Hobbie e interesses!</li>
+            </a>
+            <a href="contato.html">
+                <li>Contatos</li>
+            </a>
+        </ul>
+        <img src="img/fotoEu.jfif" alt="" width="200">
+    </header>
+
+    <main>
+            <form action="https://seuservidor.com/receber-formulario" method="post">
+                <h2>Entre em Contato</h2>
+
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+
+                <label for="assunto">Assunto:</label>
+                <select id="assunto" name="assunto" required>
+                    <option value="">Selecione</option>
+                    <option value="projeto">Quero desenvolver um projeto com você</option>
+                    <option value="feedback">Feedback sobre seu portfólio</option>
+                    <option value="networking">Vamos trocar ideias?</option>
+                    <option value="outros">Outros</option>
+                </select>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..."
+                    required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+    </main>
+
+
+
+    <footer>
+        &COPY;TODOS OS DIREITOS RESERVADOS
+        <div>
+            <a href=""><img src="icon/facebook-brands.svg" alt="facebook" width="50"></a>
+            <a href=""><img src="icon/github-brands.svg" alt="facebook" width="50"></a>
+            <a href=""><img src="icon/instagram-brands.svg" alt="facebook" width="50"></a>
+            <a href=""><img src="icon/linkedin-brands.svg" alt="facebook" width="50"></a>
+
+        </div>
+    </footer>
+    <script src="portifolio.js"></script>
+</body>
+
+</html>

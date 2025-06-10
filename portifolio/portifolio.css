@@ -1,0 +1,230 @@
+/* ====================================inicicio================================= */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    background: black;
+    box-shadow: 5px 10px 20px;
+}
+
+header h1{
+    color: white;
+    font-size: 50px;
+    position: relative;
+    left: 40%;
+}
+header ul{
+    width: 100%;
+    position: relative;
+    top: 190px;
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    right: 50px;
+}
+header ul li{
+    list-style: none;
+    font-size: 20px;
+}
+
+header ul a{
+    text-decoration: none;
+    color: blue;
+}
+
+ul a:hover{
+    text-decoration: underline;
+    color: aqua;
+}
+
+header img{
+    position: relative;
+    border-radius: 50%;
+    top: 90px;
+}
+main{
+    justify-items: center;
+    background: whitesmoke;
+    padding: 10px;
+}
+
+section div{
+    position: relative;
+    padding: 10px;
+
+}
+
+section div h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+
+section div p{
+    padding: 20px;
+    position: relative;
+    top: 5px;
+}
+
+section div h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+
+
+div ul{
+    display: flex;
+    padding: 40px;
+    gap: 10px;
+
+}
+
+div ul li{
+    padding: 20px;
+    list-style: none;
+}
+
+
+footer{
+    justify-items: center;
+    padding: 20px;
+    box-shadow: 0 0 20px;
+    margin-top: 90px;
+}
+
+footer div{
+    display: flex;
+    padding: 10px;
+    justify-content: end;
+    width: 100%;
+    border-top: solid;
+    gap: 20px;
+}
+
+footer div img{
+   transform: translate(10px, 25%);
+}
+footer div img:hover{
+   transform: scale(1.1);
+}
+
+/* ==================================== fim inicicio================================= */
+/* ==================================== inici sobre================================= */
+
+
+
+section p{
+    margin-top: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 20px;
+    width: 800px;
+}
+/* ==================================== fim sobre================================= */
+/* ==================================== inicio hoob================================= */
+main h1{
+    display: block;
+    color: rgb(0, 136, 255);
+}
+main p{
+    position: relative;
+    top: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-top: solid;
+    border-bottom: solid;
+    padding: 20px;
+}
+.hob{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+.divs{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px;
+    border-left: solid;
+    width: 25%;
+    
+}
+strong{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+}
+
+
+
+
+
+/* ==================================== fim hoob================================= */
+form {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      width: 200%;
+      max-width: 600px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2e7d32;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #388e3c;
+    }
+
+    @media (max-width: 600px) {
+      form {
+        padding: 20px;
+      }
+    }
