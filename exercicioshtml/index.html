@@ -2,37 +2,31 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Contato</title>
+  <title>Portfólio - Wellington</title>
   <link rel="stylesheet" href="landing-page.css">
 </head>
 <body>
   <header>
     <h1>PORTFÓLIO</h1>
     <nav>
-      <a href="landing-page.html">INÍCIO</a>
       <a href="landing-page-sobre.html">SOBRE MIM</a>
+      <a href="landing-page-contato.html">CONTATO</a>
     </nav>
   </header>
 
-  <main id="contato">
-    <h2 class="destaque-contato">Você pode me enviar uma mensagem!</h2>
-    <p>Preencha o seu nome, seu e-mail e escreva a mensagem que deseja enviar para mim. Logo quando eu puder, irei de responder.</p>
-    <p>Desde já, agradeço o seu contato!</p>
-
-    <form id="form-contato">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" required>
-
-      <label for="email">E-mail:</label>
-      <input type="email" id="email" required>
-
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" required></textarea>
-
-      <button type="submit">Enviar</button>
-    </form>
+  <main id="inicio">
+    <div class="texto">
+      <p>Olá, seja bem-vindo(a) ao meu portfólio!</p>
+      <h2>Meu nome é <span class="destaque">WELLINGTON JORGE OLIVEIRA</span> e eu sou um desenvolvedor web</h2>
+      <div class="icones">
+        <img src="img/icons8-github-50.png" alt="GitHub">
+        <img src="img/icons8-linkedin-50.png" alt="LinkedIn">
+      </div>
+      <a href="sobre.html" class="botao">Conheça mais sobre mim</a>
+    </div>
+    <div class="imagem">
+      <img src="img/grapy-software-developer-coding-with-two-monitors.png" alt="Dev">
+    </div>
   </main>
-
-  <script src="landing-page.js"></script>
 </body>
 </html>
