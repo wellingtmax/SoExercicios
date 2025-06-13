@@ -34,10 +34,11 @@
         nav {
             align-items: center;
             padding: 5px;
-            background: rgb(238, 241, 238);
+            background: rgba(238, 241, 238, 0.678);
             height: 40px;
             margin-left: 150px;
-            border-top: 1px solid rgba(0, 0, 0, 0.178);
+            border-top: 1px solid rgba(0, 0, 0, 0.044);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.044);
         }
 
         aside {
@@ -82,8 +83,11 @@
             height: 250px;
         }
         .tall{
-            grid-row: span 2;
+            grid-row: span 6;
             background-color: #f6d186;
+        }
+        .normal{
+            background: rgb(230, 227, 227);
         }
 
         .item {
@@ -159,7 +163,8 @@
              }
              main{
                 margin-left: 90px;
-            }
+                display: flex;
+                
             section {
                 grid-template-columns:repeat(1, 1fr);
             }
@@ -199,7 +204,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolore hic alias doloremque culpa, voluptates exercitationem. Impedit ipsam numquam nostrum architecto odio quis voluptas alias rem consectetur possimus? Neque, nostrum?</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolore hic alias doloremque culpa, voluptates exercitationem. Impedit ipsam numquam nostrum architecto odio quis voluptas alias rem consectetur possimus? Neque, nostrum?</p>
             </div>
-            <div class="item">
+            <div class="item normal">
                 <img src="img/cordilheira-majestosa-coberta-de-neve-pico-tranquilo-prado-gerado-por-ia.webp" alt="">
                 <h3>Noticia 2</h3>
                 <p>Informações relevantes e atuais sobre a comunidade.</p>
@@ -212,7 +217,7 @@
                 <p>Detalhes sobre evento que ocorrerá nesta semana.</p>
                 <p>Detalhes sobre evento que ocorrerá nesta semana.</p>
             </div>
-            <div class="item">
+            <div class="item normal">
                 <img src="img/praia-do-norte-na-nazare-portugal-com-ondas-espumantes.webp" alt="">
                 <h3>Noticia 4</h3>
                 <p>Destaque especial com foco em cultura ou educação</p>
@@ -227,49 +232,70 @@
                 <img src="img/cordilheira-majestosa-coberta-de-neve-pico-tranquilo-prado-gerado-por-ia.webp" alt="">
                 <h3>Noticia 6</h3>
                 <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
+                <p>Informações relevantes e atuais sobre a comunidade.</p>
             </div>
-            <div class="item">
+            <div class="item normal">
                 <img src="img/foto-de-tirar-o-folego-da-ponte-vasco-da-gama-ao-nascer-do-sol-em-lisboa-portugal.webp"
                     alt="">
                 <h3>Noticia 7</h3>
                 <p>Detalhes sobre evento que ocorrerá nesta semana.</p>
             </div>
-            <div class="item">
+            <div class="item normal">
                 <img src="img/praia-do-norte-na-nazare-portugal-com-ondas-espumantes.webp" alt="">
                 <h3>Noticia 8</h3>
                 <p>Destaque especial com foco em cultura ou educação</p>
             </div>
-            <div class="item">
+            <div class="item normal">
                 <img src="img/caminho-de-terra-em-um-parque-florestal-passando-por-uma-arca-de-pedra-na-serra-do-bucaco-portugal.webp"
                     alt="">
                 <h3>Noticia 1</h3>
                 <p>Resumo breve da noticia com um pouco de texto para contextualizar</p>
             </div>
-            <div class="item">
+            <div class="item normal">
                 <img src="img/cordilheira-majestosa-coberta-de-neve-pico-tranquilo-prado-gerado-por-ia.webp" alt="">
                 <h3>Noticia 1</h3>
                 <p>Informações relevantes e atuais sobre a comunidade.</p>
             </div>
-            <div class="item">
+            <div class="item normal">
                 <img src="img/foto-de-tirar-o-folego-da-ponte-vasco-da-gama-ao-nascer-do-sol-em-lisboa-portugal.webp"
                     alt="">
                 <h3>Noticia 1</h3>
                 <p>Detalhes sobre evento que ocorrerá nesta semana.</p>
             </div>
-            <div class="item">
+            <div class="item normal">
                 <img src="img/praia-do-norte-na-nazare-portugal-com-ondas-espumantes.webp" alt="">
                 <h3>Noticia 1</h3>
                 <p>Destaque especial com foco em cultura ou educação</p>
             </div>
-            <div class="item tall">
-                <img src="img/caminho-de-terra-em-um-parque-florestal-passando-por-uma-arca-de-pedra-na-serra-do-bucaco-portugal.webp"
-                    alt="">
-                <h3>Noticia 1</h3>
-                <p>Resumo breve da noticia com um pouco de texto para contextualizar</p>
-            </div>
+            
             <div class="item wide">
                 <img src="img/cordilheira-majestosa-coberta-de-neve-pico-tranquilo-prado-gerado-por-ia.webp" alt="">
-                <h3>Noticia 1</h3>
+                <h3>Noticia 8</h3>
                 <p>Informações relevantes e atuais sobre a comunidade.</p>
             </div>
         </section>
