@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=he, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: whitesmoke;
+        }
+
+        header {
+            background: linear-gradient(rgb(39, 39, 231), rgb(56, 52, 52));
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+
+        }
+
+        .tela {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 1px;
+        }
+
+        .corpo1 {
+            width: 200px;
+            height: 200vh;
+            margin-top: 3px;
+            border: solid 2px;
+            position: fixed;
+            background: linear-gradient(rgb(32, 32, 119), rgb(122, 118, 118));
+            color: white;
+        }
+
+        .sub-item {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s;
+            margin-left: 10px;
+            padding: 3px;
+        }
+
+        .item-g:hover>.sub-item {
+            max-height: 300px;
+        }
+
+        .item-g:hover {
+            color: rgb(202, 195, 195);
+            cursor: pointer;
+        }
+
+        .item1 {
+            margin: 10px;
+            padding: 5px;
+            list-style: none;
+        }
+
+        .item1 li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .item1 li a:hover {
+            color: rgb(202, 195, 195);
+        }
+
+        h3 {
+            margin-top: 50px;
+        }
+
+        /* ==================================gride============================= */
+        .grade {
+            width: 100%;
+            margin-left: 220px;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 40px;
+            column-gap: 10px;
+
+        }
+
+        .g {
+            width: 520px;
+            height: 200px;
+            text-align: center;
+            align-content: center;
+            align-items: center;
+            border: solid 2px rgba(0, 0, 0, 0.096);
+            background: linear-gradient(rgba(7, 189, 158, 0.521), rgba(1, 131, 70, 0.575));
+            color: rgb(0, 0, 0);
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+
+        /* ==================================gride============================= */
+
+        @media (max-width: 700px) {
+            .sec2 {
+                display: block;
+            }
+
+            .sec {
+                display: block;
+            }
+
+            .de {
+                width: 100%;
+                height: 250px;
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Cabeçalho com Gride</h3>
+    </header>
+
+    <main class="tela">
+
+        <section class="corpo1">
+            <ul class="item1">
+                <li class="item-g">
+                    Menu
+                    <ul class="sub-item">
+                        <li><a href="#">Calças</a></li>
+                        <li><a href="#">Vestidos</a></li>
+                        <li><a href="#">Bermudas</li>
+                        <li><a href="#">calcados</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Links</a></li>
+                <li><a href="#">Carrinho</a></li>
+            </ul>
+        </section>
+
+        <section class="grade">
+            <div class="g g-1">1</div>
+            <div class="g g-2">2</div>
+            <div class="g g-3">3</div>
+            <div class="g g-4">4</div>
+            <div class="g g-5">5</div>
+            <div class="g g-6">6</div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

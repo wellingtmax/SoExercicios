@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=he, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            position: relative;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('img/istockphoto-1210120932-612x612.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.7;
+            z-index: -1;
+        }
+
+
+        header {
+            display: flex;
+            background: linear-gradient(rgb(69, 69, 73), rgb(56, 52, 52));
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+
+        header h3 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 100%;
+        }
+        .div-link{
+            width: 500px;
+        }
+        .ul-link{
+            display: flex;
+            gap: 30px;
+        }
+
+        .li-link{
+            list-style: none;
+        }
+        .li-link a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .fot {
+            display: flex;
+            gap: 30px;
+            margin-left: 50px;
+        }
+
+        .fot img {
+            width: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>awesome sneakers</h3>
+        <div class="div-link">
+            <ul class="ul-link">
+                <li class="li-link"><a href="#">Home</a></li>
+                <li class="li-link"><a href="#">Shop</a></li>
+                <li class="li-link"><a href="#">About AS</a></li>
+                <li class="li-link"><a href="#">Customer Service</a></li>
+            </ul>
+        </div>
+        <div class="fot">
+            <img src="img/circle-user-solid.svg" alt="">
+            <img src="img/bag-shopping-solid.svg" alt="">
+        </div>
+    </header>
+
+    <main class="tela">
+
+    </main>
+
+</body>
+
+</html>
