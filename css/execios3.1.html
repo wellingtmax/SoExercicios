@@ -5,6 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=he, initial-scale=1.0" />
     <title>Document</title>
+    <head>
+    ...
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    ...
+</head>
+
     <style>
         * {
             margin: 0;
@@ -28,7 +34,7 @@
             background-image: url('img/istockphoto-1210120932-612x612.jpg');
             background-size: cover;
             background-position: center;
-            opacity: 0.7;
+            opacity: 0.8;
             z-index: -1;
         }
 
@@ -41,43 +47,109 @@
             text-align: center;
             position: sticky;
             top: 0;
+            gap: 50px;
+        }
+
+        .as {
+            width: 70px;
+            height: 70px;
+            margin-left: 90px;
+            position: relative;
         }
 
 
         header h3 {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            width: 100%;
-        }
-        .div-link{
-            width: 500px;
-        }
-        .ul-link{
-            display: flex;
-            gap: 30px;
+            position: relative;
+            top: 25px;
+            right: 40px;
         }
 
-        .li-link{
+        .div-link {
+            width: 500px;
+            justify-items: end;
+        }
+
+        .ul-link {
+            display: flex;
+            margin-top: 25px;
+            gap: 40px;
+        }
+
+        .li-link {
             list-style: none;
         }
-        .li-link a{
+
+        .li-link a {
             color: white;
             text-decoration: none;
         }
 
+        .li-link a:hover{
+            color: wheat;
+            text-decoration: underline;
+        }
+
         .fot {
             display: flex;
-            gap: 30px;
-            margin-left: 50px;
+            gap: 15px;
+            margin-left: 90px;
         }
 
         .fot img {
             width: 30px;
+        }
+
+        .tela {
+            justify-items: center;
+
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-items: center;
+            position: relative;
+            left: 400px;
+            bottom: 60px;
+        }
+
+        section h1 {
+            position: relative;
+            bottom: 110px;
+            color: white;
+            font-weight: bold;
+            width: 100%;
+            font-size: 70px;
+            text-shadow:
+                -1px -1px 0 black,
+                1px -1px 0 black,
+                -1px 1px 0 black,
+                1px 1px 0 black;
+        }
+        button{
+            position: relative;
+            bottom: 100px;
+            width: 200px;
+            padding: 10px;
+            left: 150px;
+        }
+
+        button:hover{
+            background: wheat;
+        }
+        .fa-solid{
+            position: relative;
+            top: 20px;
+            right: 5px;
         }
     </style>
 </head>
 
 <body>
     <header>
+        <img class="as" src="img/as-removebg-preview.png" alt="">
         <h3>awesome sneakers</h3>
         <div class="div-link">
             <ul class="ul-link">
@@ -89,11 +161,19 @@
         </div>
         <div class="fot">
             <img src="img/circle-user-solid.svg" alt="">
+            <i class="fa-solid fa-caret-down"></i>
             <img src="img/bag-shopping-solid.svg" alt="">
         </div>
     </header>
 
     <main class="tela">
+        <section>
+            <div>
+                <img src="img/as-removebg-preview.png" alt="">
+            </div>
+            <h1>awesome sneakers</h1>
+            <button>SHOP NOW</button>
+        </section>
 
     </main>
 
