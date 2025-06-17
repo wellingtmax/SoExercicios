@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: rgb(236, 234, 234);
+        }
+
+        /* ================================HEADER============================ */
+        header {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: rgb(236, 234, 234);
+        }
+
+        .ico {
+            width: 450px;
+            margin-left: 20px;
+        }
+
+        .mum {
+            width: 90%;
+            height: 200px;
+        }
+
+        header h1 {
+            margin-top: 90px;
+            color: rgb(18, 18, 128);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 90px;
+        }
+
+        /* ================================HEADER============================ */
+        /* ================================ASIDE============================ */
+        aside {
+            width: 250px;
+            height: 70vh;
+            margin: 20px;
+            padding: 10px;
+        }
+
+        aside li {
+            list-style-type: none;
+            padding: 3px;
+        }
+
+        div ul img {
+            margin-right: 10px;
+        }
+
+        .do {
+            position: relative;
+            text-align: center;
+            border-bottom: solid rgba(0, 0, 0, 0.178);
+            top: 200px;
+        }
+
+        .do h3 {
+            margin-bottom: 20px;
+        }
+
+        div ul li a{
+            text-decoration: none;
+        }
+        div ul li a:hover{
+            text-decoration: underline;
+            color: rgb(83, 67, 37);
+        }
+
+        /* ================================ASIDE============================ */
+        /* ================================main============================ */
+
+        main {
+            display: flex;
+            margin-left: 40px;
+            padding: 10px;
+        }
+
+        .grade-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            margin: 30px;
+        }
+
+        .grade {
+            width: 360px;
+            justify-items: center;
+            border-bottom: solid rgba(0, 0, 0, 0.199);
+        }
+
+        .grade h2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .grade p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .grade img {
+            width: 350px;
+
+        }
+
+
+
+
+        /* ================================main============================ */
+        /* ================================footer============================ */
+        footer {
+            width: 100%;
+            border-top: solid rgba(0, 0, 0, 0.514);
+            padding: 5px;
+            text-align: center;
+        }
+
+        .inteira {
+            display: flex;
+            justify-content: center;
+            gap: 250px;
+            width: 100%;
+        }
+
+        iframe {
+            margin-top: 30px;
+            width: 250px;
+            height: 100px;
+        }
+
+        .rede {
+            display: flex;
+            margin: 20px;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .rede img {
+            width: 40px;
+        }
+
+        .loc,
+        .exp,
+        .cont {
+            padding: 5px;
+        }
+
+        p {
+            font-weight: bold;
+        }
+        .grade p a{
+            font-size: 15px;
+            text-decoration: none;
+            color: blue;
+        }
+        .grade p a:hover{
+            font-size: 17px;
+            text-decoration: none;
+            color: rgb(61, 61, 211);
+        }
+
+        /* ================================footer============================ */
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="ico" src="img/33.png" alt="">
+        <h1>MUSEU NACIONAL</h1>
+        <img class="mum" src="img/header.png" alt="">
+    </header>
+
+    <main>
+        <aside>
+            <div>
+                <ul>
+                    <li><img src="img/right-long-solid.svg" width="15px"><a href="#">O MUSEU</a></li>
+                    <li><img src="img/right-long-solid.svg" width="15px"><a href="#">EXPOSIÇÕES</a></li>
+                    <li><img src="img/right-long-solid.svg" width="15px"><a href="#">PESQUISA</a></li>
+                    <li><img src="img/right-long-solid.svg" width="15px"><a href="#">PÓS-GRADUAÇÃO</a></li>
+                    <li><img src="img/right-long-solid.svg" width="15px"><a href="#">EXTENSÃO</a></li>
+                    <li><img src="img/right-long-solid.svg" width="15px"><a href="#">ACERVO</a></li>
+                    <li><img src="img/right-long-solid.svg" width="15px"><a href="#">VISITAÇÃO</a></li>
+                    <li><img src="img/right-long-solid.svg" width="15px"><a href="#">EDUCAÇÃO</a></li>
+                </ul>
+            </div>
+            <div class="do">
+                <img src="img/doacao.png" width="240">
+                <h3><a href="#" style="color: blue; border-bottom: solid; text-decoration: none;">FAÇA UMA DOAÇÂO</a></h3>
+            </div>
+        </aside>
+
+        <div class="grade-grid">
+            <div class="grade">
+                <img src="img/lancamento.png" alt="">
+                <h2>LAÇAMENTO</h2>
+                <p>Conheça a politica de gerenciamento
+                    de coleções do Museu Nacional. <a href="#">Clique Aqui!</a></p>
+
+            </div>
+            <div class="grade">
+                <img src="img/bolsa.png" alt="">
+                <h2>BOLSAS DE DOUTORADO</h2>
+                <p>Conheça as bolsas de doutorado oferecidas
+                    pelo FCT-PRISC-UFRJ <a href="#">Clique Aqui!</a></p>
+            </div>
+            <div class="grade">
+                <img src="img/aniversario.png" alt="">
+                <h2>ANIVERSÀRIO DO MUSEU</h2>
+                <p>Venha comemorar conosco os 207 anos do Museu Nacional/UFRJ.
+                    <a href="#">Acesse a programação completa!</a>
+                </p>
+            </div>
+            <div class="grade">
+                <img src="img/relatorio.png" alt="">
+                <h2>RELATÓRIO ANUAIS</h2>
+                <p>Leia os <a href="#">relatórios</a> institucionais do Museu Nacional/UFRJ
+                    entre 2018 e 2023</p>
+            </div>
+            <div class="grade">
+                <img src="img/mestrado.png" alt="">
+                <h2>MESTRADO PROFISSIONAL</h2>
+                <p>Linguistica e Linguas Indigenas. Inscrições abertas de 28/04/2025 a 14/05/2025. <a href="#">Acesse o
+                        edital!</a></p>
+            </div>
+            <div class="grade">
+                <img src="img/concurso.png" alt="">
+                <h2>CONCURSO DOCENTE DI</h2>
+                <p>Concurso público para docentes do Dep. de
+                    Invertebrados -Vaga MC-233. Celenterologia/Cnidaria!
+                    <a href="#">Clique Aqui!</a>
+                </p>
+            </div>
+        </div>
+
+
+    </main>
+    <footer>
+        <div class="inteira">
+            <div class="loc">
+                <h2>LOCALIZAÇÂO</h2>
+                <br>
+                <p>Quinta da Boa Viosta, são Cristóvão</p>
+                <p>Rio de Janeiro - RJ</p>
+                <p>CEP: 20940 - 040</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.221646113658!2d-43.221785399999995!3d-22.9051942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997ef752db2015%3A0x1b672cd9162d9606!2sQuinta%20da%20Boa%20Vista!5e0!3m2!1spt-BR!2sbr!4v1750184633177!5m2!1spt-BR!2sbr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="exp">
+                <h2>EXPEDIENTE</h2>
+                <br>
+                <p>Eposição "Um Museu de Descobertas</p>
+                <p>Terça-feira: 10h</p>
+                <p>Quarta-feira a Sexta-feira: 10h e 14h</p>
+                <p>Somente grupos agendados: agendamento.nap@mn.ufrj.br</p>
+            </div>
+            <div class="cont">
+                <h2>CONTATO</h2>
+                <br>
+                <p>Informações: museu@mn.ufrj.br</p>
+                <p>Direção: falecomdiretor@mn.ufrj.br</p>
+                <p>Assessoria de Imprensa: imprensa@mn.ufrj.br</p>
+                <p>Visitas em Grupos: agendamento.nap@mn.ufrj.br</p>
+            </div>
+        </div>
+
+        <div class="rede">
+            <h2>SIGA O MUSEU NAS REDES SOCIAIS</h2>
+            <img src="img/facebook-brands-.svg" alt="">
+            <img src="img/google-brands.svg" alt="">
+            <img src="img/instagram-brands-.svg" alt="">
+            <img src="img/youtube-brands-.svg" alt="">
+        </div>
+        <h5>Copyright &copy;2025 Museu Nacional/UFRJ</h5>
+    </footer>
+
+</body>
+
+</html>
