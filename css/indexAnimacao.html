@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6 - Animações e Transições</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: whitesmoke;
+        }
+
+        header {
+            justify-items: center;
+            font-weight: bold;
+            padding: 30px;
+            background: linear-gradient(blue, black);
+            color: white;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* =============================================================================== */
+
+        #item1 {
+            width: 100%;
+            height: 100px;
+            border-radius: 90px 90px 0 0;
+            background-color: steelblue;
+            margin-top: 10px;
+
+            transition: all 0.5s ease-in-out;
+        }
+       
+
+        #item1:hover {
+            width: 150px;
+            height: 150px;
+            background-color: crimson;
+        }
+        /* =============================================================================== */
+
+        #item2 {
+            width: 100px;
+            height: 80px;
+            background-color: rgb(158, 255, 2);
+            margin-top: 10px;
+            position: relative;
+            margin-left: 50px;
+            border-radius: 20px;
+
+            animation-name: mover;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            
+        }
+        
+         .frente{
+            width: 200px;
+            height: 50px;
+            background-color: rgb(158, 255, 2);
+            margin-top: 10px;
+            position: relative;
+            z-index: 5;
+            bottom: 60px;
+            left: 30px;
+            border-radius: 60px 0;
+
+            animation-name: mover;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        .costa{
+            width: 200px;
+            height: 50px;
+            background-color: rgb(158, 255, 2);
+            margin-top: 10px;
+            position: relative;
+            bottom: 120px;
+            margin-left: 50px;
+            z-index: 5;
+            border-radius: 0 25px;
+
+            animation-name: mover;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        .roda{
+            width: 50px;
+            height: 50px;
+            background-color: rgb(10, 10, 10);
+            margin-top: 10px;
+            position: relative;
+            bottom: 156px;
+            margin-left: 180px;
+            border-radius: 50%;
+            
+
+            animation-name: mover;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        .roda2{
+            width: 50px;
+            height: 50px;
+            background-color: rgb(8, 8, 8);
+            margin-top: 10px;
+            position: relative;
+            bottom: 215px;
+            margin-left: 30px;
+            border-radius: 50%;
+
+            animation-name: mover;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        .pista{
+            position: relative;
+            bottom: 50px;
+            border: solid 1px black;
+        }
+
+        @keyframes mover {
+            0% {
+                left: 0;
+            }
+
+            50% {
+                left: 50%;
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+
+        /* =============================================================================== */
+
+        #item3 {
+            width: 150px;
+            height: 100px;
+            background-color: rgb(81, 92, 88);
+            opacity: 0;
+
+            animation: aparecer 3s ease forwards;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        #item4{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(199, 22, 16);
+            margin: 25px;
+
+
+            animation: moverGirar 4s infinite alternate;
+        }
+
+        @keyframes moverGirar {
+            0% {
+                transform: translate(0);
+            }
+            100% {
+                transform: translate(500px) rotate(360deg);
+                background: linear-gradient(blue, red);
+                border-radius: 50%;
+            }
+
+            
+        }
+       .rod{
+            justify-items: center;
+            background: linear-gradient(blue, black);
+            color: white;
+           
+        }
+        .rod li{
+             list-style: none;
+        }
+        .rod li a{
+            color: aquamarine;
+        }
+
+        /* =============================================================================== */
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>🎨 Aula 6 – Animações e Transições</h1>
+        <p><strong>Instrutor:</strong> Nivaldo Batista de Araújo – <a
+                href="mailto:nivaldo.araujo@docente.senai.br">nivaldo.araujo@docente.senai.br</a></p>
+    </header>
+
+    <!-- SEÇÃO 1 -->
+    <section>
+        <h2>💡 Por que usar animações e transições?</h2>
+        <ul>
+            <li>✅ Melhoram a experiência do usuário</li>
+            <li>✅ Tornam a navegação mais fluida e compreensível</li>
+            <li>✅ Dão vida à interface</li>
+            <li>✅ Ajudam na acessibilidade com mudanças suaves</li>
+        </ul>
+    </section>
+
+    <!-- SEÇÃO 2 -->
+    <section>
+        <h2>🔁 Diferença entre Transições e Animações</h2>
+        <p><strong>Transições:</strong> mudam uma propriedade CSS de um estado para outro de forma suave.</p>
+        <p><strong>Animações:</strong> permitem definir etapas mais complexas e independem de interações diretas.</p>
+    </section>
+
+    <!-- SEÇÃO 3 -->
+    <section>
+        <h2>🎯 Exemplo de Transição (hover)</h2>
+        <p>Ao passar o mouse no quadrado abaixo, ele mudará de cor e tamanho com uma transição suave:</p>
+        <div id="item1"></div>
+        
+        <p><strong>Código:</strong> <code>transition: all 0.5s ease-in-out;</code></p>
+    </section>
+
+    <!-- SEÇÃO 4 -->
+    <section>
+        <h2>🚀 Exemplo de Animação com Keyframes</h2>
+        <p>O quadrado se move da esquerda para a direita infinitamente.</p>
+        
+        <div id="item2"></div>
+        <div class="frente"></div>
+        <div class="costa"></div>
+        <div class="roda"></div>
+        <div class="roda2"></div
+        <div class="pista"></div>
+        <p><strong>Propriedades:</strong> animation-name, duration, timing-function, iteration-count</p>
+    </section>
+
+    <!-- SEÇÃO 5 -->
+    <section>
+        <h2>✨ Animação de Opacidade</h2>
+        <p>O quadrado aparece suavemente ao carregar a página.</p>
+        <div id="item3"></div>
+        <p><code>animation-fill-mode: forwards</code> mantém o último estado da animação.</p>
+    </section>
+
+    <!-- SEÇÃO 6 -->
+    <section>
+        <h2>⚙️ Movimento + Rotação</h2>
+        <p>O quadrado se move 500px e gira 360° continuamente.</p>
+        <div id="item4"></div>
+        <p><strong>Transformações usadas:</strong> <code>translateX</code> e <code>rotate</code></p>
+    </section>
+
+    <!-- SEÇÃO FINAL -->
+    <section class="rod">
+        <h2>📚 Links úteis</h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform" target="_blank">Transform – MDN</a>
+            </li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation" target="_blank">Animation – MDN</a>
+            </li>
+        </ul>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.bg-green{
+    background: green;
+}
+.bg-blue{
+    background: blue;
+}
+.bg-black{
+    background: black;
+}
+.bg-whitesmoke{
+    background: whitesmoke;
+}
+.bg-white{
+    background: white;
+}
+.cl-white{
+    color: white;
+}
+.cl-black{
+    color: black;
+}
+.cl-blue{
+    color: blue;
+}
+.cl-green{
+    color: green;
+}
+.padd-10{
+    padding: 10px;
+}
+.pd-20{
+    padding: 20px;
+}
+.pd-30{
+    padding: 30px;
+}
+.pd-40{
+    padding: 40px;
+}
+.mg-10{
+    margin: 10px;
+}
+.mg-20{
+    margin: 20px;
+}
+.mg-30{
+    margin: 30px;
+}
+.mg-40{
+    margin: 40px;
+}
+.wth_100{
+    width: 100%;
+}
+.wth_50{
+    width: 50%;
+}
+.wth_25{
+    width: 25%;
+}
+.wth-100{
+    width: 100px;
+}
+.wth-90{
+    width: 90px;
+}
+.wth-80{
+    width: 80px;
+}
+.wth-70{
+    width: 70px;
+}
+.wth-60{
+    width: 60px;
+}
+.wth-50{
+    width: 50px;
+}
+.wth-40{
+    width: 40px;
+}
+.wth-30{
+    width: 30px;
+}
+.wth-20{
+    width: 20px;
+}
+.wth-10{
+    width: 10px;
+}
+.wth-5{
+    width: 5px;
+}
+.hgt-500{
+    height: 500px;
+}
+.hgt-200{
+    height: 200px;
+}
+.hgt-100{
+    height: 100px;
+}
+.hgt-auto{
+    height: auto;
+}
+.bd-10{
+    border: 10px;
+}
+.bd-20{
+    border: 20px;
+}
+.bd-30{
+    border: 30px;
+}
+.bd-40{
+    border: 40px;
+}
+.bd-50{
+    border: 50px;
+}
+.bds-1{
+    border: solid 1px;
+}
+.bdr_50{
+    border-radius: 50%;
+}
+.bdr-5{
+    border-radius: 5px;
+}
+.bdr-8{
+    border-radius: 8px;
+}
+.bdr-10{
+    border-radius: 10px;
+}
+.bdr-15{
+    border-radius: 15px;
+}
+.jfc-center{
+    justify-content: center;
+}
+.jfi-center{
+    justify-items: center;
+}
+.tA-center{
+    text-align: center;
+}
+.Ali-center{
+    align-items: center;
+}

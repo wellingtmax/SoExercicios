@@ -37,9 +37,17 @@
             height: 200vh;
             margin-top: 3px;
             border: solid 2px;
-            position: fixed;
             background: linear-gradient(rgb(32, 32, 119), rgb(122, 118, 118));
             color: white;
+            position: absolute;
+        }
+
+        .menu {
+            width: 30px;
+            position: absolute;
+            top: 60px;
+            left: 30px;
+            cursor: pointer;
         }
 
         .sub-item {
@@ -80,33 +88,44 @@
 
         /* ==================================gride============================= */
         .grade {
-            width: 100%;
+            width: 70%;
             margin-left: 220px;
-            padding: 10px;
+            padding: 5px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            row-gap: 40px;
+            row-gap: 10px;
             column-gap: 10px;
-
         }
 
         .g {
-            width: 520px;
+            width: 400px;
             height: 200px;
             text-align: center;
             align-content: center;
-            align-items: center;
             border: solid 2px rgba(0, 0, 0, 0.096);
             background: linear-gradient(rgba(7, 189, 158, 0.521), rgba(1, 131, 70, 0.575));
             color: rgb(0, 0, 0);
             font-size: 50px;
             font-weight: bold;
+            box-shadow: 2px 3px 5px rgb(0, 139, 253);
+            border-radius: 10px;
         }
+
 
 
         /* ==================================gride============================= */
 
-        @media (max-width: 700px) {
+        @media (max-width: 1600px) {
+            .grade {
+                width: 100%;
+                margin-left: 100px;
+                padding: 10px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                row-gap: 40px;
+                column-gap: 10px;
+            }
+
             .sec2 {
                 display: block;
             }
@@ -120,18 +139,84 @@
                 height: 250px;
                 display: block;
             }
+
+            .corpo1 {
+                width: 200px;
+                height: 200vh;
+                margin-top: 3px;
+                border: solid 2px;
+                background: linear-gradient(rgb(32, 32, 119), rgb(122, 118, 118));
+                color: white;
+                position: absolute;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            .corpo1.ativo {
+                transform: translateX(0);
+            }
+
+
+            .menu {
+                width: 30px;
+                position: absolute;
+                top: 60px;
+                left: 30px;
+                cursor: pointer;
+            }
+
+
+        }
+
+        @media (max-width: 1088px) {
+            .grade {
+                width: 100%;
+                margin-left: 50px;
+                padding: 10px;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap
+            }
+
+            .corpo1 {
+                width: 200px;
+                height: 200vh;
+                margin-top: 3px;
+                border: solid 2px;
+                background: linear-gradient(rgb(32, 32, 119), rgb(122, 118, 118));
+                color: white;
+                position: absolute;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            .corpo1.ativo {
+                transform: translateX(0);
+            }
+
+
+            .menu {
+                width: 30px;
+                position: absolute;
+                top: 60px;
+                left: 30px;
+                cursor: pointer;
+            }
         }
     </style>
 </head>
 
 <body>
     <header>
+        <div class="menu" onclick="abrirMenu()">
+            <img src="img/bars-solid.svg" alt="">
+        </div>
         <h3>Cabeçalho com Gride</h3>
     </header>
 
     <main class="tela">
 
-        <section class="corpo1">
+        <section class="corpo1" id="menuLateral">
             <ul class="item1">
                 <li class="item-g">
                     Menu
@@ -154,10 +239,25 @@
             <div class="g g-4">4</div>
             <div class="g g-5">5</div>
             <div class="g g-6">6</div>
+            <div class="g g-6">7</div>
+            <div class="g g-6">8</div>
+            <div class="g g-6">9</div>
+            <div class="g g-6">10</div>
+            <div class="g g-6">11</div>
+            <div class="g g-6">12</div>
 
         </section>
 
     </main>
+
+
+
+
+    <script>
+        function abrirMenu() {
+            document.getElementById('menuLateral').classList.toggle('ativo');
+        }
+    </script>
 
 </body>
 

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bola girando em torno do plano</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #d4ff70;
+        }
+
+        .plano {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            border: solid 4px blue;
+            border-radius: 50%;
+            box-shadow: 30px 20px 35px;
+        }
+
+        .orbitador {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: girar 3s linear infinite;
+        }
+        .ob2{
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            transform: translate(-70%, -70%);
+            animation: girar 1s linear infinite;
+        }
+        .ob1{
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            transform: translate(-70%, -70%);
+            animation: girar 9s linear infinite;
+            border: solid 10px rgb(0, 17, 255);
+        }
+        .ob3{
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            transform: translate(-70%, -70%);
+            animation: girar 20s linear infinite;
+        }
+        .cx2 {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgb(0, 81, 255);
+            position: absolute;
+            top: -250px; /* Distância radial da bola em relação ao centro */
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 3px 4px 5px;
+        }
+        .cx3 {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgb(102, 255, 0);
+            position: absolute;
+            top: -200px; /* Distância radial da bola em relação ao centro */
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 3px 4px 5px;
+        }
+        .cx4 {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgb(183, 0, 255);
+            position: absolute;
+            top: -200px; /* Distância radial da bola em relação ao centro */
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 3px 4px 5px;
+        }
+
+        .caixa {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            top: -250px; /* Distância radial da bola em relação ao centro */
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 3px 4px 5px;
+        }
+
+        @keyframes girar {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="plano">
+        
+        <div class="orbitador">
+            <div class="orbitado ob1">
+            <div class="caixa"></div>
+            </div>
+            <div class="orbitado ob2">
+            <div class="cx2"></div>
+            </div>
+            <div class="orbitado ob3">
+            <div class="cx3"></div>
+            </div>
+            <div class="cx4"></div>
+        </div>
+    </div>
+
+</body>
+</html>

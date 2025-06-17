@@ -5,13 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=he, initial-scale=1.0" />
     <title>Document</title>
+
     <head>
-    ...
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    ...
-</head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
 
     <style>
+        @import url(universal.css);
         * {
             margin: 0;
             padding: 0;
@@ -43,37 +43,45 @@
             display: flex;
             background: linear-gradient(rgb(69, 69, 73), rgb(56, 52, 52));
             color: white;
-            padding: 20px;
+            padding: 10px;
             text-align: center;
             position: sticky;
-            top: 0;
-            gap: 50px;
+            z-index: 1;
+            justify-content: space-around;
         }
 
         .as {
-            width: 70px;
-            height: 70px;
-            margin-left: 90px;
-            position: relative;
+            width: 50px;
+            height: 50px;
+        }
+
+        .as-div {
+            width: 300px;
+            display: flex;
+            gap: 10px;
+            padding: 10px;
         }
 
 
-        header h3 {
+        .as-div h3 {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            position: relative;
-            top: 25px;
-            right: 40px;
+            margin-top: 15px;
+            text-shadow:
+                -1px -1px 0 rgb(255, 250, 250),
+                1px -1px 0 rgb(255, 255, 255),
+                -1px 1px 0 rgb(255, 255, 255),
+                1px 1px 0 rgb(255, 255, 255);
         }
 
         .div-link {
-            width: 500px;
-            justify-items: end;
+            justify-items: center;
         }
 
         .ul-link {
             display: flex;
             margin-top: 25px;
-            gap: 40px;
+            gap: 60px;
+            padding: 3px;
         }
 
         .li-link {
@@ -82,10 +90,13 @@
 
         .li-link a {
             color: white;
+            position: relative;
+            z-index: 5;
+            cursor: pointer;
             text-decoration: none;
         }
 
-        .li-link a:hover{
+        .li-link a:hover {
             color: wheat;
             text-decoration: underline;
         }
@@ -93,7 +104,6 @@
         .fot {
             display: flex;
             gap: 15px;
-            margin-left: 90px;
         }
 
         .fot img {
@@ -128,7 +138,8 @@
                 -1px 1px 0 black,
                 1px 1px 0 black;
         }
-        button{
+
+        button {
             position: relative;
             bottom: 100px;
             width: 200px;
@@ -136,10 +147,11 @@
             left: 150px;
         }
 
-        button:hover{
+        button:hover {
             background: wheat;
         }
-        .fa-solid{
+
+        .fa-solid {
             position: relative;
             top: 20px;
             right: 5px;
@@ -149,8 +161,10 @@
 
 <body>
     <header>
-        <img class="as" src="img/as-removebg-preview.png" alt="">
-        <h3>awesome sneakers</h3>
+        <div class="as-div">
+            <img class="as" src="img/as-removebg-preview.png" alt="">
+            <h3 class="cl-black">awesome sneakers</h3>
+        </div>
         <div class="div-link">
             <ul class="ul-link">
                 <li class="li-link"><a href="#">Home</a></li>
