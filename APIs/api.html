@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Pessoas - CRUD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(0, 0, 0, 0.082);
+            color: white;
+            margin-top: 100px;
+            padding: 20px;
+            justify-content: center;
+            justify-items: center;
+        }
+        #central {
+            width: 700px;
+            background: rgba(32, 37, 43, 0.164);
+            color: black;
+            padding: 10px;
+            box-shadow: 4px 2px 2px rgb(168, 162, 162);
+            border-radius: 20px;
+            text-align: center;
+            justify-items: center;
+            margin: 0 auto;
+        }
+        label, input, button {
+            display: block;
+            width: 90%;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        input {
+            border: none;
+            border-radius: 10px 10px 0 0;
+            border-bottom: rgba(0, 0, 255, 0.274) solid;
+            font-size: 18px;
+        }
+        button {
+            cursor: pointer;
+            width: 93%;
+            border: solid 1px;
+            border-radius: 10px;
+        }
+        button:hover {
+            background-color: rgba(0, 0, 255, 0.267);
+            color: white;
+        }
+        #resultado div {
+            padding: 5px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        .btn {
+            margin: 3px;
+            padding: 7px;
+        }
+        strong {
+            color: white;
+        }
+        p {
+            font-weight: bold;
+            color: rgba(1, 1, 121, 0.623);
+        }
+        .formAtualizar {
+            width: 500px;
+            justify-items: left;
+            background: rgba(98, 139, 180, 0.205);
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .formAtualizar button {
+            width: 90%;
+        }
+        .formAtualizar div {
+            border-bottom: 1px solid rgba(255, 0, 0, 0.267);
+            width: 95%;
+            display: flex;
+        }
+        #redd:hover {
+            background-color: rgba(255, 0, 0, 0.267);
+        }
+    </style>
+</head>
+<body>
+
+<div id="central">
+    <h3>PROCURAR</h3>
+    <input type="text" id="nome" placeholder="Ex: L, Lu, Lucas">
+    <button onclick="buscar()">Buscar</button>
+
+    <div id="resultado"></div>
+
+    <h3>Adicionar Nova Pessoa</h3>
+    <input type="text" id="novoNome" placeholder="Nome">
+    <input type="number" id="novaIdade" placeholder="Idade">
+    <input type="text" id="novoCPF" placeholder="CPF">
+    <input type="text" id="novoSexo" placeholder="Sexo">
+    <button onclick="adicionarPessoa()">Salvar Nova Pessoa</button>
+</div>
+
+<script>
+function buscar() {
+    const nomeBuscado = document.getElementById('nome').value.trim().toLowerCase();
+    const resultado = document.getElementById('resultado');
+
+    if (nomeBuscado === '') {
+        resultado.innerHTML = '<p>Digite algo para buscar.</p>';
+        return;
+    }
+
+    fetch('http://localhost:3001/pessoas')
+        .then(response => response.json())
+        .then(data => {
+            const filtrados = data.filter(pessoa =>
+                pessoa.nome.toLowerCase().startsWith(nomeBuscado)
+            );
+
+            filtrados.sort((a, b) => a.nome.localeCompare(b.nome));
+
+            resultado.innerHTML = '';
+
+            if (filtrados.length > 0) {
+                filtrados.forEach(pessoa => {
+                    resultado.innerHTML += `
+                        <div class="formAtualizar">
+                            <p><strong>ID: </strong> ${pessoa.id}</p>
+                            <p><strong>Nome: </strong> ${pessoa.nome}</p>
+                            <p><strong>Idade: </strong> ${pessoa.idade}</p>
+                            <p><strong>CPF: </strong> ${pessoa.cpf}</p>
+                            <p><strong>Sexo: </strong> ${pessoa.sexo}</p>
+                            <div>
+                                <button class="btn" id="redd" onclick="excluirPessoa('${pessoa.id}')">Excluir</button>
+                                <button class="btn" onclick="mostrarFormularioAtualizar('${pessoa.id}', '${pessoa.nome}', ${pessoa.idade}, '${pessoa.cpf}', '${pessoa.sexo}')">Atualizar</button>
+                            </div>
+                        </div>
+                    `;
+                });
+            } else {
+                resultado.innerHTML = '<p>Nenhum resultado encontrado.</p>';
+            }
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            resultado.innerHTML = '<p>Erro ao buscar dados.</p>';
+        });
+}
+
+function adicionarPessoa() {
+    const nome = document.getElementById('novoNome').value.trim();
+    const idade = parseInt(document.getElementById('novaIdade').value);
+    const cpf = document.getElementById('novoCPF').value.trim();
+    const sexo = document.getElementById('novoSexo').value.trim();
+
+    fetch('http://localhost:3001/pessoas', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nome, idade, cpf, sexo })
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert('Pessoa adicionada com sucesso!');
+        buscar();
+    })
+    .catch(error => console.error('Erro ao adicionar:', error));
+}
+
+function excluirPessoa(id) {
+    if (confirm('Tem certeza que deseja excluir esta pessoa?')) {
+        fetch(`http://localhost:3001/pessoas/${id}`, {
+            method: 'DELETE'
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Pessoa excluída com sucesso.');
+                buscar();
+            } else {
+                console.error('Falha ao excluir:', response.statusText);
+            }
+        })
+        .catch(error => {
+            console.error('Erro ao excluir:', error);
+        });
+    }
+}
+
+function mostrarFormularioAtualizar(id, nome, idade, cpf, sexo) {
+    const resultado = document.getElementById('resultado');
+    resultado.innerHTML += `
+        <div id="formAtualizar-${id}">
+            <h4>Atualizar Pessoa (ID: ${id})</h4>
+            <input type="text" id="updNome-${id}" value="${nome}">
+            <input type="number" id="updIdade-${id}" value="${idade}">
+            <input type="text" id="updCPF-${id}" value="${cpf}">
+            <input type="text" id="updSexo-${id}" value="${sexo}">
+            <button onclick="atualizarPessoa('${id}')">Salvar Alterações</button>
+        </div>
+    `;
+}
+
+function atualizarPessoa(id) {
+    const nome = document.getElementById(`updNome-${id}`).value.trim();
+    const idade = parseInt(document.getElementById(`updIdade-${id}`).value);
+    const cpf = document.getElementById(`updCPF-${id}`).value.trim();
+    const sexo = document.getElementById(`updSexo-${id}`).value.trim();
+
+    fetch(`http://localhost:3001/pessoas/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id, nome, idade, cpf, sexo })
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Pessoa atualizada com sucesso!');
+            buscar();
+        } else {
+            console.error('Falha ao atualizar:', response.statusText);
+        }
+    })
+    .catch(error => {
+        console.error('Erro ao atualizar:', error);
+    });
+}
+</script>
+
+</body>
+</html>
+
+
+
+

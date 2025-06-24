@@ -1,0 +1,137 @@
+[
+    {
+        "id": "1",
+        "nome": "Pneu Aro 15",
+        "descricao": "Pneu radial para carros de passeio, aro 15 polegadas.",
+        "preco": 299.99,
+        "quantidade": 100,
+        "Peso": 800,
+        "categoria": "Pneus"
+    },
+    {
+        "id": "2",
+        "nome": "Óleo de Motor 5W30",
+        "descricao": "Óleo sintético para motores a gasolina e flex.",
+        "preco": 49.99,
+        "quantidade": 200,
+        "Peso": 1000,
+        "categoria": "Lubrificantes"
+    },
+    {
+        "id": "3",
+        "nome": "Bateria 60Ah",
+        "descricao": "Bateria automotiva 12V 60Ah para veículos leves.",
+        "preco": 399.99,
+        "quantidade": 150,
+        "Peso": 14000,
+        "categoria": "Elétrica"
+    },
+    {
+        "id": "4",
+        "nome": "Filtro de Ar",
+        "descricao": "Filtro de ar para motores 1.0 a 2.0.",
+        "preco": 39.99,
+        "quantidade": 50,
+        "Peso": 300,
+        "categoria": "Filtros"
+    },
+    {
+        "id": "5",
+        "nome": "Pastilha de Freio Dianteira",
+        "descricao": "Jogo de pastilhas de freio dianteiras para carros populares.",
+        "preco": 89.99,
+        "quantidade": 75,
+        "Peso": 1200,
+        "categoria": "Freios"
+    },
+    {
+        "id": "6",
+        "nome": "Amortecedor Traseiro",
+        "descricao": "Amortecedor traseiro para veículos hatch.",
+        "preco": 159.99,
+        "quantidade": 120,
+        "Peso": 3500,
+        "categoria": "Suspensão"
+    },
+    {
+        "id": "7",
+        "nome": "Farol Dianteiro",
+        "descricao": "Farol dianteiro lado direito para sedan compacto.",
+        "preco": 249.99,
+        "quantidade": 30,
+        "Peso": 2500,
+        "categoria": "Iluminação"
+    },
+    {
+        "id": "8",
+        "nome": "Palheta do Limpador",
+        "descricao": "Par de palhetas para limpador de para-brisa.",
+        "preco": 29.99,
+        "quantidade": 180,
+        "Peso": 400,
+        "categoria": "Acessórios"
+    },
+    {
+        "id": "9",
+        "nome": "Filtro de Combustível",
+        "descricao": "Filtro de combustível para motores flex.",
+        "preco": 24.99,
+        "quantidade": 90,
+        "Peso": 350,
+        "categoria": "Filtros"
+    },
+    {
+        "id": "10",
+        "nome": "Lanterna Traseira",
+        "descricao": "Lanterna traseira lado esquerdo para hatch.",
+        "preco": 119.99,
+        "quantidade": 60,
+        "Peso": 1800,
+        "categoria": "Iluminação"
+    },
+    {
+        "id": "11",
+        "nome": "Correia Dentada",
+        "descricao": "Correia dentada para motores 1.6.",
+        "preco": 59.99,
+        "quantidade": 110,
+        "Peso": 700,
+        "categoria": "Motor"
+    },
+    {
+        "id": "12",
+        "nome": "Radiador",
+        "descricao": "Radiador de alumínio para veículos compactos.",
+        "preco": 299.99,
+        "quantidade": 40,
+        "Peso": 3500,
+        "categoria": "Arrefecimento"
+    },
+    {
+        "id": "13",
+        "nome": "Jogo de Velas de Ignição",
+        "descricao": "Jogo com 4 velas de ignição para motores flex.",
+        "preco": 69.99,
+        "quantidade": 20,
+        "Peso": 400,
+        "categoria": "Ignição"
+    },
+    {
+        "id": "14",
+        "nome": "Retrovisor Elétrico",
+        "descricao": "Retrovisor elétrico lado direito para sedan.",
+        "preco": 199.99,
+        "quantidade": 70,
+        "Peso": 1200,
+        "categoria": "Acessórios"
+    },
+    {
+        "id": "15",
+        "nome": "Kit Embreagem",
+        "descricao": "Kit de embreagem para veículos 1.0 e 1.4.",
+        "preco": 399.99,
+        "quantidade": 25,
+        "Peso": 3500,
+        "categoria": "Transmissão"
+    }
+]

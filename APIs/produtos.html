@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background: #222;
+        color: #f5f5f5;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        color: #00e676;
+    }
+
+    #produtos, #btn, #descricao {
+        display: block;
+        margin: 20px auto;
+        font-size: 1.1rem;
+        border-radius: 6px;
+        border: none;
+        outline: none;
+    }
+
+    #produtos {
+        width: 300px;
+        padding: 10px;
+        background: #333;
+        color: #fff;
+        box-shadow: 0 2px 8px #0006;
+    }
+
+    #btn {
+        background: #00e676;
+        color: #222;
+        padding: 12px 40px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.2s;
+        box-shadow: 0 2px 8px #0006;
+    }
+
+    #btn:hover {
+        background: #00c853;
+    }
+
+    #descricao {
+        width: 90%;
+        max-width: 600px;
+        min-height: 120px;
+        padding: 12px;
+        background: #181818;
+        color: #fff;
+        resize: vertical;
+        box-shadow: 0 2px 8px #0006;
+    }
+
+    h4 {
+        width: 90%;
+        max-width: 600px;
+        margin: 20px auto 0 auto;
+        font-size: 1.2rem;
+        background: #333;
+        padding: 10px 20px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 2px 8px #0006;
+    }
+
+    h4 p {
+        display: inline;
+        margin: 0 0 0 10px;
+        font-weight: bold;
+        color: #00e676;
+        font-size: 1.3rem;
+    }
+</style>
+<body>
+    <h1>Produtos</h1>
+    <select name="produtos" id="produtos">
+        <option value="1">Produto1</option>
+        <option value="2">Produto2</option>
+        <option value="3">Produto3</option>
+        <option value="4">Produto4</option>
+        <option value="5">Produto5</option>
+        <option value="6">Produto6</option>
+        <option value="7">Produto7</option>
+        <option value="8">Produto8</option>
+        <option value="9">Produto9</option>
+        <option value="10">Produto10</option>
+        <option value="11">Produto11</option>
+        <option value="12">Produto12</option>
+        <option value="13">Produto13</option>
+        <option value="14">Produto14</option>
+        <option value="15">Produto15</option>
+    </select>
+    <button id="btn">Enviar</button>
+    <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea>
+    <h4>Valor Unitario: <p id="valor-unitario"></p></h4>
+    <h4>Valor Total: <p id="valor-total"></p></h4>
+    <script>
+        let produtosData = [];
+        let valorTotal = 0;
+
+        fetch('produtos.json')
+            .then(response => response.json())
+            .then(produtos => {
+                produtosData = produtos;
+                const select = document.getElementById('produtos');
+                select.innerHTML = '';
+                produtos.forEach((produto, idx) => {
+                    const option = document.createElement('option');
+                    option.value = idx;
+                    option.textContent = produto.nome;
+                    select.appendChild(option);
+                });
+
+                // Lista de produtos adicionados
+                let produtosAdicionados = [];
+
+                function atualizarValores(produtoSelecionado) {
+                    document.getElementById('valor-unitario').textContent = produtoSelecionado.preco.toFixed(2);
+                }
+
+                function atualizarDescricaoETotal() {
+                    const textarea = document.getElementById('descricao');
+                    textarea.value = produtosAdicionados.map(p =>
+                        `${p.nome} ${p.preco.toFixed(2)} ${p.Peso}`
+                    ).join('\n');
+                    valorTotal = produtosAdicionados.reduce((acc, p) => acc + p.preco, 0);
+                    document.getElementById('valor-total').textContent = valorTotal.toFixed(2);
+                }
+
+                document.getElementById('btn').addEventListener('click', function() {
+                    const idx = select.value;
+                    const produtoSelecionado = produtosData[idx];
+                    produtosAdicionados.push(produtoSelecionado);
+                    atualizarDescricaoETotal();
+                    document.getElementById('valor-unitario').textContent = produtoSelecionado.preco.toFixed(2);
+                });
+
+                // Botão para remover último produto adicionado
+                const btnRemover = document.createElement('button');
+                btnRemover.textContent = 'Remover último';
+                btnRemover.id = 'btn-remover';
+                btnRemover.style.display = 'block';
+                btnRemover.style.margin = '20px auto';
+                btnRemover.style.background = '#ff5252';
+                btnRemover.style.color = '#fff';
+                btnRemover.style.padding = '12px 40px';
+                btnRemover.style.cursor = 'pointer';
+                btnRemover.style.fontWeight = 'bold';
+                btnRemover.style.borderRadius = '6px';
+                btnRemover.style.border = 'none';
+                btnRemover.style.boxShadow = '0 2px 8px #0006';
+                btnRemover.onmouseover = function() { btnRemover.style.background = '#d32f2f'; };
+                btnRemover.onmouseout = function() { btnRemover.style.background = '#ff5252'; };
+
+                document.body.insertBefore(btnRemover, document.getElementById('descricao'));
+
+                btnRemover.addEventListener('click', function() {
+                    if (produtosAdicionados.length > 0) {
+                        produtosAdicionados.pop();
+                        atualizarDescricaoETotal();
+                    }
+                });
+
+                // Inicializa valores com o primeiro produto
+                if (produtosData.length > 0) {
+                    atualizarValores(produtosData[0]);
+                }
+
+                select.addEventListener('change', function() {
+                    const idx = select.value;
+                    atualizarValores(produtosData[idx]);
+                });
+            })
+            .catch(error => {
+                console.error('Erro ao carregar produtos:', error);
+            });
+    </script>
+</body>
+</html>
