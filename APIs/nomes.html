@@ -110,6 +110,9 @@
 </head>
 <body>
     <h1>Lista de Usuários</h1>
+    <div style="margin-bottom:20px; max-width:400px;"></div>
+    <input type="text" id="busca-usuario" placeholder="Buscar por nome ou ID..." style="width:99%;padding:10px;font-size:1em;border-radius:6px;border:1px solid #ccc;margin-bottom:20px;">
+
     <div class="grid-container" id="lista-usuarios-locais"></div>
 
     <h2>Usuários da API Externa (jsonplaceholder)</h2>
@@ -157,6 +160,38 @@
             .catch(error => {
                 console.error('Erro ao carregar usuários externos:', error);
             });
+             document.getElementById('busca-usuario').addEventListener('input', function() {
+            const termo = this.value.trim().toLowerCase();
+            if (!termo) return;
+
+            // Procura nos cards locais 
+            const cardsLocais = document.querySelectorAll('#lista-usuarios-locais .card');
+            let encontrado = false;
+            cardsLocais.forEach(card => {
+                const nome = card.querySelector('.user-nome')?.textContent.toLowerCase() || '';
+                const id = card.querySelector('.user-id')?.textContent.replace('#','').toLowerCase() || '';
+                if (nome.includes(termo) || id === termo) {
+                    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    card.style.outline = '3px solid #ff9800';
+                    setTimeout(() => card.style.outline = '', 1500);
+                    encontrado = true;
+                }
+            });
+
+            // Procura nos cards da API
+            if (!encontrado) {
+                const cardsApi = document.querySelectorAll('#lista-usuarios-api .card');
+                cardsApi.forEach(card => {
+                    const nome = card.querySelector('.user-nome')?.textContent.toLowerCase() || '';
+                    const id = card.querySelector('.user-id')?.textContent.replace('#','').toLowerCase() || '';
+                    if (nome.includes(termo) || id === termo) {
+                        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        card.style.outline = '3px solid #ff9800';
+                        setTimeout(() => card.style.outline = '', 1500);
+                    }
+                });
+            }
+        });
     </script>
 </body>
 </html>
