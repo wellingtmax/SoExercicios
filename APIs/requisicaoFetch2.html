@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisição</title>
+     <style>
+        
+        body{
+            text-align: center;
+        }
+        .card-api {
+            border: 1px solid #7bff00;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 12px;
+            background: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            max-width: 400px;
+        }
+        .user-title {
+            font-size: 1.2em;
+            color: #888888;
+        }
+        .user-url {
+            font-size: 1.1em;
+            margin-bottom: 4px;
+        }
+        strong{
+            font-size: 20px;
+        }
+        .resultado{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 20px;
+            text-align: left;
+            border-bottom: solid red;
+            border-top: solid red;
+        }
+        .s1{
+            color: blue;
+        }
+        .s2{
+            color: red;
+        }
+        .a{
+            color: blue;
+        }
+        .p{
+            color: red;
+        }
+        .i{
+            color: rgb(0, 255, 0);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav style="background: #222; padding: 16px 0; margin-bottom: 24px;">
+            <span style="color: #fff; font-size: 2em; font-weight: bold; letter-spacing: 2px;">Home Page - <em class="a">A</em><em class="p">P</em><em class="i">I</em> de Fotos</span>
+        </nav>
+    </header>
+    <div class="resultado"></div>
+
+    <footer>
+        <div style="background: #222; color: #fff; padding: 16px 0; margin-top: 32px;">
+            <span style="font-size: 1.1em;">&copy; 2024 API de Fotos | Desenvolvido por Wellington Oliveira</span>
+        </div>
+    </footer>
+
+    <script>
+        
+        function renderizarUsuarios(usuarios) {
+            const resultado = document.querySelector('.resultado');
+            resultado.innerHTML = '';
+            
+            usuarios.forEach(usuario => {
+                const card = document.createElement('div');
+                card.className = 'card-api';
+                
+                card.innerHTML = `
+                    <div class="user-title"><strong class="s1">titulo: </strong >${usuario.title}</div>
+                    <div class="user-url"><strong class="s2">url: </strong >${usuario.url}</div>
+                `;
+                
+                resultado.appendChild(card);
+            });
+        }
+        
+
+        fetch('https://jsonplaceholder.typicode.com/photos')
+            .then(response => response.json())
+            .then(data => {
+                const usuarios = data.slice(0, 15);
+                renderizarUsuarios(usuarios);
+            })
+            .catch(error => {
+                console.error('Erro ao carregar usuários externos:', error);
+            });
+    </script>
+</body>
+</html>
