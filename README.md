@@ -21,7 +21,7 @@ Exercícios e práticas de lógica de programação.
 Desafio temático com foco em estruturação HTML/CSS inspirado em interfaces de TV.  
 🎯 Objetivo: treinar posicionamento e layout responsivo.
 
-### `portifoli`  
+### `portfólio`  
 Protótipo do meu portfólio pessoal.  
 🌐 Inclui seções "Sobre mim", "Projetos" e "Contato", com design e layout próprios.  
 🎨 Paleta personalizada e ícones em PNG.
