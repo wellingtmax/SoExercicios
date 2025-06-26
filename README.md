@@ -6,8 +6,8 @@ Bem-vindo(a) ao meu repositório de estudos! Aqui compartilho minha jornada de a
 
 ## 📁 Estrutura do Repositório
 
-### `exercicios01html` / `exercicioshtml`
-### `APIs` / `CSS`
+### `HTML` / `JavaScript`
+### `APIs` / `CSS` / `TypeScript`
 Exercícios básicos de HTML e estruturação de páginas.  
 🛠️ Foco: tags, semântica, listas, tabelas e formulários.  
 📌 Atualizado recentemente com ajustes de caminhos e estrutura de pastas.
