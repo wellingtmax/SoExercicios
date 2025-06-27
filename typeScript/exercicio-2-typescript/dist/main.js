@@ -1,19 +1,17 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 const autor_1 = require("./autor");
 const livro_1 = require("./livro");
-const livrosAutor_json_1 = __importDefault(require("./livrosAutor.json"));
-const totalLivros = new livro_1.Livros();
-const nomeAutor = new autor_1.Autor();
-console.log(`
-    O autor ${nomeAutor.autor('José Hermeniones de Nobrega')} publicou ao logo de sua carreira ${totalLivros.total(50)} Livros
-    e o mais conhecido ${totalLivros.nomeLivro('Eu venci o TypeScript volume 10')} rescebeu o Premio Paz!
-    `);
-livrosAutor_json_1.default.forEach(todos => {
-    console.log(`
-        Livos como "${todos.nome}"
-        `);
-});
+const autor1 = new autor_1.Autor('William Shakespeare', 'Stratford-upon-Avon, Inglaterra', 1564);
+const autor2 = new autor_1.Autor('Jules Gabriel Verne', 'Nantes, França', 1828);
+const autor3 = new autor_1.Autor('J. K. Rowling', ' South Gloucestershire, Reino Unido', 1965);
+const livros1 = new livro_1.Livros('Romeu e Julieta', autor1, 1, 1592);
+const livros2 = new livro_1.Livros('Cinco semanas em um balão', autor2, 1, 1863);
+const livros3 = new livro_1.Livros('Harry Potter e a Pedra Filosofal', autor3, 1, 1997);
+console.log('==============================================================');
+console.log(livros1);
+console.log('==============================================================');
+console.log(livros2);
+console.log('==============================================================');
+console.log(livros3);
+console.log('==============================================================');

@@ -1,9 +1,23 @@
 export class Autor {
-   
+   nome: string;
+   pais: string;
+   anoNascimento: number
     
-    constructor(){ }
+    constructor(nome: string, pais:string, anoNascimento:number){
+        this.nome = nome;
+        this.pais = pais;
+        this.anoNascimento = anoNascimento;
+     }
 
-    autor(nome:string){
-        return nome
+    stgAutor(): string{
+        return this.nome;
+    }
+
+    stgPais(): string{
+        return this.pais;
+    }
+
+    stgNascimento(): number{
+        return this.anoNascimento;
     }
 }
