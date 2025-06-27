@@ -9,12 +9,13 @@ class nomePessoas {
         this.profissao = profissao;
     }
     metPessoas() {
-        console.log(`
-            ${this.nome}
-            ${this.idade}
-            ${this.rg}
-            ${this.profissao}
-            `);
+        return `
+        =====================================
+        NOME: ${this.nome},
+        IDADE: ${this.idade} ANOS,
+        RG: ${this.rg}, ${this.profissao.qualProfissao()},
+        =====================================
+        `;
     }
 }
 exports.nomePessoas = nomePessoas;

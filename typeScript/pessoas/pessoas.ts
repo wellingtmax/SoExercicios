@@ -4,10 +4,10 @@ export class nomePessoas{
 
     nome: string;
     idade: number;
-    rg: number;
+    rg: string;
     profissao: Profissao
 
-    constructor(nome:string, idade:number, rg:number, profissao:Profissao) {
+    constructor(nome:string, idade:number, rg:string, profissao:Profissao) {
         this.nome = nome;
         this.idade = idade;
         this.rg = rg;
@@ -15,12 +15,13 @@ export class nomePessoas{
     }
 
     metPessoas(){
-        console.log(`
-            ${this.nome}
-            ${this.idade}
-            ${this.rg}
-            ${this.profissao}
-            `)
+        return `
+        =====================================
+        NOME: ${this.nome},
+        IDADE: ${this.idade} ANOS,
+        RG: ${this.rg}, ${this.profissao.qualProfissao()},
+        =====================================
+        `
     }
 
 

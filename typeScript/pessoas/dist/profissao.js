@@ -8,9 +8,10 @@ class Profissao {
         this.setor = setor;
     }
     qualProfissao() {
-        return `${this.matricula}
-        ${this.nomeProfissao}
-        ${this.setor}`;
+        return `
+        MATRICULA: ${this.matricula},
+        PROFISSÃO: ${this.nomeProfissao},
+        SETOR: ${this.setor}`;
     }
 }
 exports.Profissao = Profissao;
