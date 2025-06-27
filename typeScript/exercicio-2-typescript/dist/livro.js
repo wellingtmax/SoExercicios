@@ -20,5 +20,15 @@ class Livros {
     livAnoLancamento() {
         return this.anoLancamento;
     }
+    toString() {
+        return `
+        Autor: ${this.autor.nome}
+        Pais onde Nasceu: ${this.autor.pais}
+        Nasceu no ano de: ${this.autor.anoNascimento}
+            Titulo da Obra: ${this.titulo}
+            Volume: ${this.volume}
+            Ano de Lançamento: ${this.anoLancamento}
+        `;
+    }
 }
 exports.Livros = Livros;

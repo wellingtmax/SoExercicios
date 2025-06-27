@@ -9,14 +9,3 @@ console.log(`
     a multiplicação de 10 * 20 é: ${resultado.multiplicar(10,20)}
     a elevação de 2^5 é: ${resultado.elevacao(2,5)}
     `);
-
-
-
-
-
-
-
-
-
-
-

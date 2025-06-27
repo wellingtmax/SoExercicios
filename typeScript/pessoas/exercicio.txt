@@ -1,0 +1,18 @@
+Exercício 2
+1 - Crie o arquivo Pessoas.ts
+- Dentro de ste arquivo crie uma classe com nome de Pessoas.
+Atributos: nome, idade, rg
+Métodos: 
+ Construtor
+ Método com uma string para visualizar os
+ atributos. (console.log)
+Crie o arquivo Profissao
+- Dentro do arqiuivo crie a classe Profissao
+Atibutos: matricula, nomeProfissao, setor
+Métodos: 
+ Construtor
+ Método que retorna(return) uma string com os atributos 
+ (sem console.log)
+Crie o arquivo main
+- Dentro deste arquivo estancie as classes e utilize todos os 
+ métodos 
