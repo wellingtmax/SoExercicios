@@ -1,0 +1,7 @@
+Interfaces em POO
+
+1 - Definir contrato
+2 - promover abstração
+    interface diz o que precisa ser feito(assinatuira dos metodos)
+    a classe concreta diz como sera feito(implentação do metodos)
+facilita o polimorfismo

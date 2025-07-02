@@ -1,0 +1,9 @@
+---------------------------------------------------------------------------------------Exercício 01--------------------------------------
+1 - Criar uma classe abstrata Animal com atributos nome, raca e cor
+métodos abstrato comer()
+2 - Criar a classe Morcego extender da classe Animal e utilizar os 
+atributos e métodos.
+3 - Cria uma classe Baleia extender da classe Animal e utilizar os 
+atributos e métodos.
+4 - Arquivo main chame as classes Morcego e Baleia e utilize os 
+métodos mostrando o que eles estão comendo.
