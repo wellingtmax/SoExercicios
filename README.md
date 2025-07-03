@@ -8,7 +8,7 @@ Bem-vindo(a) ao meu repositório de estudos! Aqui compartilho minha jornada de a
 
 ### `HTML` / `JavaScript`
 ### `APIs` / `CSS` / `TypeScript` ==>>( conceitos de {
-### /`POO` / `herança` / `abstrato`})
+### /`POO` / `herança` / `abstrato`}) / `Angula` /
 ### ===================================================
 
 
