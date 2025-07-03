@@ -1,14 +1,5 @@
-export abstract class FormaGeometrica{
-
-    calcularArea(altura:number, largura:number){
-       return altura * largura 
-    }
-
-    calcularPerimetro(c:number, pi:number){
-        return 
-    }
-
-    exibirValor(){
-        
-    }
+export abstract class FormaGeometrica {
+    abstract calcularArea(): number;
+    abstract calcularPerimetro(): number;
+    abstract exibirValor(): void;
 }

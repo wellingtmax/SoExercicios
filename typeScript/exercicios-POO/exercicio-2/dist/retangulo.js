@@ -1,24 +1,20 @@
-import { FormaGeometrica } from "./formaMetodos"
-
-export class Retangulo extends FormaGeometrica {
-    altura: number;
-    largura: number;
-
-    constructor(altura: number, largura: number) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Retangulo = void 0;
+const formaMetodos_1 = require("./formaMetodos");
+class Retangulo extends formaMetodos_1.FormaGeometrica {
+    constructor(altura, largura) {
         super();
         this.altura = altura;
         this.largura = largura;
     }
-
-    calcularArea(): number {
+    calcularArea() {
         return this.altura * this.largura;
     }
-
-    calcularPerimetro(): number {
+    calcularPerimetro() {
         return 2 * (this.altura + this.largura);
     }
-
-    exibirValor(): void {
+    exibirValor() {
         console.log(`==Retângulo:==`);
         console.log(`==>  Altura: ${this.altura}`);
         console.log(`==>  Largura: ${this.largura}`);
@@ -26,3 +22,4 @@ export class Retangulo extends FormaGeometrica {
         console.log(`==>  Perímetro: ${this.calcularPerimetro()}`);
     }
 }
+exports.Retangulo = Retangulo;
