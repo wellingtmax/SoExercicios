@@ -3,13 +3,15 @@
 Bem-vindo(a) ao meu repositório de estudos! Aqui compartilho minha jornada de aprendizado em desenvolvimento web, lógica de programação, HTML/CSS, e outros projetos diversos. Este repositório é um portfólio vivo, com desafios, exercícios e experimentos práticos.
 
 ---
-
+### ====================================================
 ## 📁 Estrutura do Repositório
 
 ### `HTML` / `JavaScript`
 ### `APIs` / `CSS` / `TypeScript` ==>>( conceitos de {
-### /`POO` / `herança` / `abstrato`
-})
+### /`POO` / `herança` / `abstrato`})
+### ===================================================
+
+
 Exercícios básicos de HTML e estruturação de páginas.  
 🛠️ Foco: tags, semântica, listas, tabelas e formulários.  
 📌 Atualizado recentemente com ajustes de caminhos e estrutura de pastas.
