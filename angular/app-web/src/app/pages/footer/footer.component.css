@@ -1,0 +1,14 @@
+/* Footer styles */
+footer {
+  margin-top: auto;
+}
+
+.footer-link {
+  color: #adb5bd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #fff;
+}

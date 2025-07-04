@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+  <div class="container">
+    <a routerLink="/" class="navbar-brand fw-bold text-primary">
+      <i class="bi bi-house-heart-fill me-2"></i>MeuSite
+    </a>
+    
+    <button class="navbar-toggler" type="button" (click)="toggleMenu()" 
+            [attr.aria-expanded]="isMenuOpen" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" [class.show]="isMenuOpen">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" 
+             class="nav-link" (click)="closeMenu()">
+            <i class="bi bi-house me-1"></i>Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/sobre" routerLinkActive="active" class="nav-link" (click)="closeMenu()">
+            <i class="bi bi-info-circle me-1"></i>Sobre
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/contatos" routerLinkActive="active" class="nav-link" (click)="closeMenu()">
+            <i class="bi bi-envelope me-1"></i>Contatos
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/pedidos" routerLinkActive="active" class="nav-link" (click)="closeMenu()">
+            <i class="bi bi-bag me-1"></i>Pedidos
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
