@@ -1,0 +1,22 @@
+<!-- Página de produtos da Loja AngularStore -->
+<div class="produtos-container">
+  <h2>Nossos Produtos</h2>
+  <p>Confira nossa seleção de equipamentos para musculação e fitness</p>
+  
+  <!-- Grid de produtos -->
+  <div class="card-container">
+    <!-- Loop para exibir cada produto -->
+    <div class="card" *ngFor="let produto of produtos">
+      <!-- Imagem do produto -->
+      <img [src]="produto.imagem" [alt]="produto.nome" class="produto-imagem">
+      
+      <!-- Informações do produto -->
+      <div class="card-body">
+        <h3>{{produto.nome}}</h3>
+        <p class="descricao">{{produto.descricao}}</p>
+        <p class="preco">{{produto.preco}}</p>
+        <button class="btn btn-primary">Comprar</button>
+      </div>
+    </div>
+  </div>
+</div>

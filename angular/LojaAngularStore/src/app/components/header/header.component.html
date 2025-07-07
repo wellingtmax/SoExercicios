@@ -1,0 +1,35 @@
+<!-- Header com navegação da Loja AngularStore -->
+<header class="d-flex flex-wrap bg-black justify-content-center py-3 mb-4 border-bottom"> 
+    
+    <!-- Logo da loja -->
+    <a routerLink="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"> 
+        <svg class="bi me-2" width="40" height="32" aria-hidden="true">
+            <use xlink:href="#bootstrap"></use>
+        </svg> 
+        <span class="fs-4 text-white">Loja AngularStore</span>
+    </a>
+
+    <!-- Menu de navegação -->
+    <ul class="container nav nav-pills">
+        <!-- Link para produtos (página inicial) -->
+        <li class="nav-item">
+            <a routerLink="/" class="nav-link text-white" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                Produtos
+            </a>
+        </li>
+        
+        <!-- Link para contato -->
+        <li class="nav-item">
+            <a routerLink="/contato" class="nav-link text-white" routerLinkActive="active">
+                Contato
+            </a>
+        </li>
+        
+        <!-- Link para redes sociais -->
+        <li class="nav-item">
+            <a routerLink="/redes-sociais" class="nav-link text-white" routerLinkActive="active">
+                Redes Sociais
+            </a>
+        </li>
+    </ul>
+</header>

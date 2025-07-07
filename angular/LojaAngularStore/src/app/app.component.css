@@ -1,0 +1,31 @@
+/* Estilos globais da aplicação */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1; /* Faz o conteúdo principal ocupar o espaço disponível */
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 200px); /* Ajusta a altura para dar espaço para header e footer */
+}
+
+/* Estilos globais para melhor aparência */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Estilos para links ativos na navegação */
+.nav-link.active {
+  background-color: #007bff !important;
+  color: white !important;
+}

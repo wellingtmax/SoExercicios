@@ -1,0 +1,16 @@
+<!-- Página de Redes Sociais -->
+<div class="redes-sociais-container">
+  <h2>Siga a Loja AngularStore</h2>
+  <p>Conecte-se conosco nas redes sociais para receber novidades e promoções!</p>
+  
+  <!-- Lista de redes sociais -->
+  <div class="redes-grid">
+    <div class="rede-social-card" *ngFor="let rede of redesSociais">
+      <a [href]="rede.url" target="_blank" class="rede-link">
+        <i [class]="rede.icon"></i>
+        <h3>{{rede.nome}}</h3>
+        <p>Siga-nos no {{rede.nome}}</p>
+      </a>
+    </div>
+  </div>
+</div>
