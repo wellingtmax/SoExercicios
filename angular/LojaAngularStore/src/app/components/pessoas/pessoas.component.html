@@ -1,0 +1,13 @@
+<div class="container row row-col-3 bg-info bg-gradiente " style="margin-left: 200px; justify-content: center;">
+
+    <h1 class="text-center text-white">Recebendo os dados de um service de clientes</h1>
+   @for (elementos of pessoas.clientes; track elementos) {
+
+    <div class="card p-3 m-2" style="width: 350px;">
+        <p class="fs-3 text-danger text-center">{{elementos.id}}</p>
+        <p class="fs-4 border-bottom">{{elementos.nome}}</p>
+        <p class="border-bottom">E-mail: <span class="text-primary">{{elementos.email}}</span></p>
+        <p class="border-bottom">Telefone: <span class="text-primary">{{elementos.telefone}}</span></p>
+    </div>
+     }
+</div>

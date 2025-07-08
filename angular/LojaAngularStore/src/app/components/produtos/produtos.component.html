@@ -1,22 +1,28 @@
 <!-- Página de produtos da Loja AngularStore -->
-<div class="produtos-container">
+<div class="produtos-container bg-dark">
   <h2>Nossos Produtos</h2>
-  <p>Confira nossa seleção de equipamentos para musculação e fitness</p>
+  <p class="text-primary">Confira nossa seleção de equipamentos para musculação e fitness</p>
   
   <!-- Grid de produtos -->
-  <div class="card-container">
-    <!-- Loop para exibir cada produto -->
-    <div class="card" *ngFor="let produto of produtos">
-      <!-- Imagem do produto -->
-      <img [src]="produto.imagem" [alt]="produto.nome" class="produto-imagem">
-      
-      <!-- Informações do produto -->
-      <div class="card-body">
-        <h3>{{produto.nome}}</h3>
-        <p class="descricao">{{produto.descricao}}</p>
-        <p class="preco">{{produto.preco}}</p>
-        <button class="btn btn-primary">Comprar</button>
+  <div class="produtos-grid">
+    @for (produto of produtosServiceService.produtos; track produto.nome) {
+      <div class="produto-card">
+        <!-- Imagem do produto -->
+        <div class="produto-imagem-container">
+          <img [src]="produto.imagem" [alt]="produto.nome" class="produto-imagem">
+        </div>
+        
+        <!-- Informações do produto -->
+        <div class="produto-info">
+          <h3 class="produto-nome">{{produto.nome}}</h3>
+          <p class="produto-descricao">{{produto.descricao}}</p>
+          <p class="produto-preco">{{produto.preco}}</p>
+
+          @if (produto.promocao) {<p class="text-primary">{{produto.promocao}}</p>} 
+
+          <button class="btn btn-primary produto-btn">Comprar</button>
+        </div>
       </div>
-    </div>
+    }
   </div>
 </div>
