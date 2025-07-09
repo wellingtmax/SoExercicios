@@ -110,11 +110,36 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
 }
 
 .produto-btn:hover {
   background: linear-gradient(135deg, #0056b3, #004085);
   transform: translateY(-2px);
+}
+
+/* Container para ações do produto */
+.produto-acoes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.produto-acoes .btn-sm {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+}
+
+.produto-acoes .btn-outline-light {
+  border-color: #dee2e6;
+  color: #6c757d;
+}
+
+.produto-acoes .btn-outline-light:hover {
+  background-color: #f8f9fa;
+  border-color: #adb5bd;
+  color: #495057;
 }
 
 /* Responsividade */
@@ -123,15 +148,15 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .produtos-container {
     padding: 1rem;
   }
-  
+
   .produtos-container h2 {
     font-size: 2rem;
   }
-  
+
   .produto-imagem-container {
     height: 200px;
   }
@@ -141,12 +166,17 @@
   .produtos-container h2 {
     font-size: 1.8rem;
   }
-  
+
   .produto-nome {
     font-size: 1.2rem;
   }
-  
+
   .produto-preco {
     font-size: 1.5rem;
+  }
+
+  .produto-acoes .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
   }
 }

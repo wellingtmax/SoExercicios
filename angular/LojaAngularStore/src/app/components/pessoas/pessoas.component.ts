@@ -12,5 +12,8 @@ export class PessoasComponent implements OnInit{
   
   constructor(public pessoas: ClientesService){}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    
+  }
 }

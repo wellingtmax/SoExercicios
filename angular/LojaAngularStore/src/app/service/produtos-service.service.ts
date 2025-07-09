@@ -8,6 +8,10 @@ export class ProdutosServiceService {
 
   constructor() { }
 
+  minhavariavel = 'dentro de service';
+
+  produtoSendoVisto:any = null
+
   // Array com os produtos da loja de musculação
   produtos = [
     {

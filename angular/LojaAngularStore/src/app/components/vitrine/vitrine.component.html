@@ -1,0 +1,60 @@
+<!-- Página de vitrine do produto -->
+<div class="vitrine-container">
+  <div class="vitrine-content">
+
+    <!-- Título da vitrine -->
+    <div class="vitrine-header">
+      <h2 class="vitrine-titulo">Produto em Destaque</h2>
+      <p class="vitrine-subtitulo">Conheça mais detalhes sobre este produto</p>
+    </div>
+
+    <!-- Card do produto -->
+    <div class="produto-vitrine">
+
+      <!-- Seção da imagem -->
+      <div class="produto-imagem-section">
+        <div class="produto-imagem-container">
+          <img [src]="produtosServiceService.produtoSendoVisto.imagem"
+               [alt]="produtosServiceService.produtoSendoVisto.nome"
+               class="produto-imagem">
+        </div>
+      </div>
+
+      <!-- Seção das informações -->
+      <div class="produto-info-section">
+        <div class="produto-detalhes">
+          <h3 class="produto-nome">{{ produtosServiceService.produtoSendoVisto.nome }}</h3>
+
+          <div class="produto-descricao-container">
+            <p class="produto-descricao">{{ produtosServiceService.produtoSendoVisto.descricao }}</p>
+          </div>
+
+          <!-- Promoção (se existir) -->
+          @if (produtosServiceService.produtoSendoVisto.promocao) {
+            <div class="promocao-badge">
+              <span class="promocao-texto">{{ produtosServiceService.produtoSendoVisto.promocao }}</span>
+            </div>
+          }
+
+          <!-- Preço -->
+          <div class="preco-section">
+            <span class="produto-preco">{{ produtosServiceService.produtoSendoVisto.preco }}</span>
+          </div>
+
+          <!-- Botões de ação -->
+          <div class="acoes-produto">
+            <button class="btn btn-primary btn-comprar" (click)="adicionarAoCarrinho()">
+              <i class="bi bi-cart-plus me-2"></i>
+              Adicionar ao Carrinho
+            </button>
+            <button class="btn btn-outline-secondary btn-voltar" (click)="voltarParaProdutos()">
+              <i class="bi bi-arrow-left me-2"></i>
+              Voltar aos Produtos
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

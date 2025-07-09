@@ -1,8 +1,8 @@
 <!-- Header com navegação da Loja AngularStore -->
-<header class="d-flex flex-wrap bg-black justify-content-center py-3 mb-4 border-bottom">
+<header class="d-flex bg-black justify-content-center py-3 mb-4 border-bottom">
 
     <!-- Logo da loja -->
-    <a routerLink="/" class="rout d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+    <a routerLink="/" class="rout d-flex align-items-center mb-3  me-md-auto link-body-emphasis text-decoration-none">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class=" container m-1 bi bi-bootstrap text-primary"
             viewBox="0 0 16 16">
             <path
@@ -14,7 +14,7 @@
     </a>
 
     <!-- Menu de navegação -->
-    <ul class="container nav nav-pills">
+    <ul class="nav nav-pills">
         <!-- Link para produtos (página inicial) -->
         <li class="nav-item">
             <a routerLink="/" class="nav-link text-white" routerLinkActive="active"
@@ -40,6 +40,19 @@
          <li class="nav-item">
             <a routerLink="/pessoas" class="nav-link text-white" routerLinkActive="active">
                 Clientes
+            </a>
+        </li>
+
+        <!-- Ícone do carrinho com contador -->
+        <li class="nav-item">
+            <a routerLink="/carrinho" class="nav-link text-white position-relative" routerLinkActive="active">
+                <i class="bi bi-cart3 fs-5"></i>
+                @if (quantidadeItensCarrinho > 0) {
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        {{ quantidadeItensCarrinho }}
+                        <span class="visually-hidden">itens no carrinho</span>
+                    </span>
+                }
             </a>
         </li>
     </ul>

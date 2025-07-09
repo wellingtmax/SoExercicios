@@ -1,0 +1,119 @@
+<!-- Página do Carrinho de Compras -->
+<div class="carrinho-container">
+
+  <!-- Header do carrinho -->
+  <div class="carrinho-header">
+    <h2>
+      <i class="bi bi-cart3 me-3"></i>
+      Meu Carrinho
+    </h2>
+    <p class="carrinho-subtitulo">{{quantidadeTotal}} item(s) no carrinho</p>
+  </div>
+
+  <!-- Carrinho vazio -->
+  @if (carrinhoVazio) {
+    <div class="carrinho-vazio">
+      <div class="vazio-icon">
+        <i class="bi bi-cart-x"></i>
+      </div>
+      <h3>Seu carrinho está vazio</h3>
+      <p>Adicione produtos incríveis da nossa loja!</p>
+      <a routerLink="/" class="btn btn-primary btn-continuar">
+        <i class="bi bi-arrow-left me-2"></i>
+        Continuar Comprando
+      </a>
+    </div>
+  }
+
+  <!-- Carrinho com itens -->
+  @if (!carrinhoVazio) {
+    <div class="carrinho-conteudo">
+
+      <!-- Lista de itens -->
+      <div class="itens-carrinho">
+        @for (item of itensCarrinho; track item.nome) {
+          <div class="item-carrinho">
+
+            <!-- Imagem do produto -->
+            <div class="item-imagem">
+              <img [src]="item.imagem" [alt]="item.nome">
+            </div>
+
+            <!-- Informações do produto -->
+            <div class="item-info">
+              <h4 class="item-nome">{{item.nome}}</h4>
+              <p class="item-descricao">{{item.descricao}}</p>
+              <span class="item-preco-unitario">{{item.preco}} cada</span>
+            </div>
+
+            <!-- Controles de quantidade -->
+            <div class="item-controles">
+              <div class="quantidade-controles">
+                <button class="btn-quantidade" (click)="diminuirQuantidade(item)">
+                  <i class="bi bi-dash"></i>
+                </button>
+                <span class="quantidade">{{item.quantidade}}</span>
+                <button class="btn-quantidade" (click)="aumentarQuantidade(item)">
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+
+              <div class="item-total">
+                {{formatarPreco(item.precoNumerico * item.quantidade)}}
+              </div>
+
+              <button class="btn-remover" (click)="removerItem(item)" title="Remover item">
+                <i class="bi bi-trash"></i>
+              </button>
+            </div>
+          </div>
+        }
+      </div>
+
+      <!-- Resumo do carrinho -->
+      <div class="carrinho-resumo">
+        <div class="resumo-card">
+          <h3>Resumo do Pedido</h3>
+
+          <div class="resumo-linha">
+            <span>Subtotal ({{quantidadeTotal}} itens):</span>
+            <span class="valor">{{formatarPreco(valorTotal)}}</span>
+          </div>
+
+          <div class="resumo-linha">
+            <span>Frete:</span>
+            <span class="valor gratis">Grátis</span>
+          </div>
+
+          <hr class="resumo-divisor">
+
+          <div class="resumo-total">
+            <span>Total:</span>
+            <span class="valor-total">{{formatarPreco(valorTotal)}}</span>
+          </div>
+
+          <!-- Botões de ação -->
+          <div class="acoes-carrinho">
+            <button class="btn btn-outline-secondary btn-limpar" (click)="limparCarrinho()">
+              <i class="bi bi-trash3 me-2"></i>
+              Limpar Carrinho
+            </button>
+
+            <button class="btn btn-success btn-finalizar" (click)="finalizarCompra()">
+              <i class="bi bi-credit-card me-2"></i>
+              Finalizar Compra
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botão continuar comprando -->
+    <div class="continuar-comprando">
+      <a routerLink="/" class="btn btn-outline-primary">
+        <i class="bi bi-arrow-left me-2"></i>
+        Continuar Comprando
+      </a>
+    </div>
+  }
+</div>
