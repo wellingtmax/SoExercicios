@@ -33,28 +33,39 @@ export class CarrinhoService {
 
   // Adicionar produto ao carrinho
   adicionarAoCarrinho(produto: any) {
+    if (!produto || !produto.nome) {
+      console.error('Produto inválido para adicionar ao carrinho');
+      return;
+    }
+
+    console.log('Adicionando produto ao carrinho:', produto.nome);
+
     const precoNumerico = this.extrairPrecoNumerico(produto.preco);
+    console.log('Preço extraído:', precoNumerico);
 
     // Verificar se produto já existe no carrinho
     const itemExistente = this.itensCarrinho.find(item => item.nome === produto.nome);
 
     if (itemExistente) {
-      // Se existe, aumentar quantidade
+      // Se existe, aumentar quantidade em 1
       itemExistente.quantidade += 1;
+      console.log(`Quantidade aumentada para ${itemExistente.quantidade}`);
     } else {
-      // Se não existe, adicionar novo item
+      // Se não existe, adicionar novo item com quantidade 1
       const novoItem: ItemCarrinho = {
         nome: produto.nome,
         preco: produto.preco,
         imagem: produto.imagem,
         descricao: produto.descricao,
-        quantidade: 1,
+        quantidade: 1, // Sempre adiciona 1
         precoNumerico: precoNumerico
       };
       this.itensCarrinho.push(novoItem);
+      console.log('Novo item adicionado:', novoItem);
     }
 
     this.atualizarCarrinho();
+    console.log('Carrinho atualizado. Total de itens:', this.obterQuantidadeTotal());
   }
 
   // Remover produto do carrinho
@@ -90,6 +101,14 @@ export class CarrinhoService {
   limparCarrinho() {
     this.itensCarrinho = [];
     this.atualizarCarrinho();
+  }
+
+  // Método para limpar carrinho (debug)
+  limparCarrinhoCompletamente() {
+    this.itensCarrinho = [];
+    localStorage.removeItem('carrinho');
+    this.carrinhoSubject.next([]);
+    console.log('Carrinho limpo completamente');
   }
 
   // Obter itens do carrinho
@@ -136,6 +155,14 @@ export class CarrinhoService {
 
   // Extrair preço numérico da string (ex: "R$ 89,90" -> 89.90)
   private extrairPrecoNumerico(precoString: string): number {
-    return parseFloat(precoString.replace(/[R$\s,]/g, '').replace(',', '.')) || 0;
+    if (!precoString) return 0;
+
+    // Remove R$, espaços e converte vírgula para ponto
+    const numeroLimpo = precoString
+      .replace(/R\$?\s*/g, '')  // Remove R$ e espaços
+      .replace(',', '.');       // Converte vírgula para ponto
+
+    const numero = parseFloat(numeroLimpo);
+    return isNaN(numero) ? 0 : numero;
   }
 }

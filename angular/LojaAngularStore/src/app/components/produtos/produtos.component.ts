@@ -15,6 +15,8 @@ import { Router } from '@angular/router';
 })
 export class ProdutosComponent{
 
+  private adicionandoCarrinho = false; // Flag para evitar cliques duplos
+
   constructor(
     public produtosServiceService: ProdutosServiceService,
     private carrinhoService: CarrinhoService,
@@ -33,10 +35,28 @@ export class ProdutosComponent{
     // Evita que o clique no botão acione o click do card
     event.stopPropagation();
 
-    this.carrinhoService.adicionarAoCarrinho(produto);
+    // Proteção contra cliques múltiplos
+    if (this.adicionandoCarrinho) {
+      console.log('Aguarde, produto sendo adicionado...');
+      return;
+    }
 
-    // Opcional: Mostrar feedback visual
-    console.log(`${produto.nome} adicionado ao carrinho!`);
+    this.adicionandoCarrinho = true;
+
+    try {
+      this.carrinhoService.adicionarAoCarrinho(produto);
+      console.log(`${produto.nome} adicionado ao carrinho!`);
+
+      // Feedback visual opcional - você pode adicionar um toast aqui
+
+    } catch (error) {
+      console.error('Erro ao adicionar produto ao carrinho:', error);
+    } finally {
+      // Libera o flag após 500ms para evitar cliques muito rápidos
+      setTimeout(() => {
+        this.adicionandoCarrinho = false;
+      }, 500);
+    }
   }
 
 
