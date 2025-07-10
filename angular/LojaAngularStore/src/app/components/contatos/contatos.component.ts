@@ -1,20 +1,34 @@
 import { Component } from '@angular/core';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
-// Componente standalone para página de contato
+
 @Component({
   selector: 'app-contatos',
-  standalone: true,
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './contatos.component.html',
-  styleUrl: './contatos.component.css'
+  styleUrls: ['./contatos.component.css']
 })
 export class ContatosComponent {
-  
-  // Informações de contato da loja
-  contatos = {
-    endereco: 'Rua das Academias, 123 - Centro, São Paulo - SP',
-    telefone: '(11) 99999-9999',
-    email: 'contato@lojaangularstore.com.br',
-    horarioFuncionamento: 'Segunda a Sexta: 8h às 18h | Sábado: 8h às 14h'
-  };
+
+  meuFormulario: any;
+
+  constructor(private formBuilder: FormBuilder) {
+
+    this.meuFormulario = this.formBuilder.group(
+      {
+        nome: ['', Validators.required],
+        email: ['', Validators.required, '', Validators.email],
+        mensagem: ['', Validators.required],
+      }
+    );
+  }
+
+
+  enviar() {
+    if(this.meuFormulario.valid) {
+    console.log(this.meuFormulario.value)
+    } else {
+      console.log('error')
+    }
+  }
 }

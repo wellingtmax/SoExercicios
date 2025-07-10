@@ -1,60 +1,25 @@
-<p><!-- Página de contato da Loja AngularStore -->
-<div class="contatos-container">
-  <h2>Entre em Contato</h2>
-  <p>Estamos prontos para atender você! Entre em contato conosco através dos canais abaixo.</p>
-  
-  <!-- Informações de contato -->
-  <div class="contatos-grid">
-    
-    <!-- Endereço -->
-    <div class="contato-card">
-      <i class="bi bi-geo-alt"></i>
-      <h3>Endereço</h3>
-      <p>{{contatos.endereco}}</p>
+<div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
+  <div class="card shadow" style="width: 500px;">
+    <div class="card-body">
+      <h1 class="text-primary text-center mb-4">CONTATOS</h1>
+      <form [formGroup]="meuFormulario">
+        <div class="input-group flex-nowrap mb-3">
+          <span class="input-group-text">Nome: </span>
+          <input class="form-control" type="nome" placeholder="Digite seu Nome:" formControlName="nome">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+          <span class="input-group-text">E-mail: </span>
+          <input class="form-control" type="email" placeholder="Digite seu E-mail:" formControlName="email">
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="mensagem">Mensagem:</label>
+          <textarea class="form-control" id="mensagem" rows="4" placeholder="Digite sua mensagem..."
+            formControlName="mensagem"></textarea>
+        </div>
+        <div class="d-grid">
+          <button class="btn btn-primary" type="submit" (click)="enviar()">Enviar</button>
+        </div>
+      </form>
     </div>
-    
-    <!-- Telefone -->
-    <div class="contato-card">
-      <i class="bi bi-telephone"></i>
-      <h3>Telefone</h3>
-      <p>{{contatos.telefone}}</p>
-    </div>
-    
-    <!-- Email -->
-    <div class="contato-card">
-      <i class="bi bi-envelope"></i>
-      <h3>Email</h3>
-      <p>{{contatos.email}}</p>
-    </div>
-    
-    <!-- Horário de funcionamento -->
-    <div class="contato-card">
-      <i class="bi bi-clock"></i>
-      <h3>Horário de Funcionamento</h3>
-      <p>{{contatos.horarioFuncionamento}}</p>
-    </div>
-  </div>
-  
-  <!-- Formulário de contato simples -->
-  <div class="formulario-contato">
-    <h3>Envie uma mensagem</h3>
-    <form>
-      <div class="form-group">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
-      </div>
-      
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      
-      <div class="form-group">
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-      </div>
-      
-      <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-    </form>
   </div>
 </div>
