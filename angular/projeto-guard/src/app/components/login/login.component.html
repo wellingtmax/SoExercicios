@@ -1,0 +1,51 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="card" style="width: 400px;">
+    <div class="card-header text-center">
+      <h4>Login</h4>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="entrar()" #loginForm="ngForm">
+
+        <div *ngIf="erro" class="alert alert-danger" role="alert">
+          Usuário ou senha inválidos!
+        </div>
+
+        <div class="mb-3">
+          <label for="usuario" class="form-label">Usuário</label>
+          <input
+            type="text"
+            class="form-control"
+            id="usuario"
+            name="usuario"
+            [(ngModel)]="usuario"
+            (input)="limparErro()"
+            required
+            placeholder="Digite seu usuário">
+        </div>
+
+        <div class="mb-3">
+          <label for="senha" class="form-label">Senha</label>
+          <input
+            type="password"
+            class="form-control"
+            id="senha"
+            name="senha"
+            [(ngModel)]="senha"
+            (input)="limparErro()"
+            required
+            placeholder="Digite sua senha">
+        </div>
+
+        <div class="d-grid">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="!usuario || !senha">
+            Entrar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

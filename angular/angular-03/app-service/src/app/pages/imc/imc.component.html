@@ -1,0 +1,49 @@
+<div class="container mt-4" style="width: 550px;">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0">Calculadora de IMC</h2>
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="peso" class="form-label">Peso: (Kg)</label>
+                <input type="number" [(ngModel)]="peso" class="form-control" id="peso" placeholder="Digite seu peso">
+            </div>
+            <div class="mb-3">
+                <label for="altura" class="form-label">Altura: (m)</label>
+                <input type="number" [(ngModel)]="altura" class="form-control" id="altura" placeholder="Digite sua altura">
+            </div>
+            <button (click)="calcular()" class="btn btn-primary">Calcular IMC</button>
+        </div>
+    </div>
+    <div class="mt-3" *ngIf="resultado">
+        <div class="alert alert-success">
+            <strong>Resultado:</strong> {{resultado | number: '1.2-2'}}
+        </div>
+        <!-- ====================================@switch============================== -->
+        <div class="alert alert-info">
+            <strong>Classificação: </strong>
+            @switch (true) {
+                @case (resultado < 18.5) {
+                    <span class="text-primary">Abaixo do peso</span>
+                }
+                @case (resultado >= 18.5 && resultado < 25) {
+                    <span class="text-success">Peso normal</span>
+                }
+                @case (resultado >= 25 && resultado < 30) {
+                    <span class="text-warning">Sobrepeso</span>
+                }
+                @case (resultado >= 30 && resultado < 35) {
+                    <span class="text-danger">Obesidade grau I</span>
+                }
+                @case (resultado >= 35 && resultado < 40) {
+                    <span class="text-danger">Obesidade grau II</span>
+                }
+                @case (resultado >= 40) {
+                    <span class="text-danger">Obesidade grau III</span>
+                }
+            }
+        </div>
+        <!-- ====================================@switch============================== -->
+
+    </div>
+</div>

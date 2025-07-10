@@ -7,21 +7,21 @@ export class ContatorService {
 
   constructor() { }
 
-  private valor = 0;
+  private valor = 0
 
-  getValor(): number{
-    return this.valor;
+  get Valor(): number{
+    return this.valor
   }
 
   incrementar(){
-    this.valor++;
+    this.valor++
   }
 
   decrementar(){
-    this.valor--;
+    this.valor--
   }
 
   zerar(){
-    this.valor = 0;
+    this.valor = 0
   }
 }

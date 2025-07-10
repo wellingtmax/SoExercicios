@@ -7,24 +7,29 @@ import { ContatorService } from '../../service/contator.service';
   templateUrl: './contator04.component.html',
   styleUrl: './contator04.component.css'
 })
+
+
 export class Contator04Component {
+
+  
 
   constructor (private contService: ContatorService){}
 
-  getValor(): number{
-    return this.contService.getValor();
-  }
 
-  incrementar(){
-    this.contService.incrementar();
-  }
+    getValor(): number{
+      return this.contService.valor()
+    }
 
-  decrementar(){
-    this.contService.decrementar();
-  }
+    incrementar(){
+     return this.contService.incrementar()
+    }
 
-  zerar(){
-    this.contService.zerar();
-  }
+    decrementar(){
+      return this.contService.decrementar()
+    }
+
+    zerar(){
+      this.contService.zerar()
+    }
  
 }
