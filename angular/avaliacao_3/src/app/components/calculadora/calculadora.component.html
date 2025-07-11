@@ -1,0 +1,15 @@
+<div class="col-lg-3 col-xxl-2 my-5 mx-auto">
+  <div class="d-grid gap-2">
+    <button class="btn btn-outline-success mb-3" type="button" (click)="calcular()">
+      <i class="bi bi-calculator"></i>
+      calculadora
+    </button>
+  </div>
+  <div class="input-group">
+    <input type="number" class="form-control mb-3" [(ngModel)]="numero" placeholder="Digite um numero: ">
+    <span class="input-group-text mb-3">x²</span>
+  </div>
+  <div class="text-center text-primary">
+    <p>Area do qudrado ({{this.numero}}²) é: {{ resultado }}</p>
+  </div>
+</div>
