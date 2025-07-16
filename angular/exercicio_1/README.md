@@ -1,59 +1,63 @@
-# Exercicio2
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13.
+# SPA Produtos & Serviços - Angular 19
 
-## Development server
+## Descrição
+Este projeto é uma Single Page Application (SPA) desenvolvida em Angular 19, utilizando Bootstrap 5 para estilização e responsividade. O objetivo é apresentar um sistema completo com autenticação, proteção de rotas, exibição de produtos/serviços e navegação dinâmica, ideal para demonstração acadêmica.
 
-To start a local development server, run:
+## Funcionalidades Implementadas
+- **Página Inicial:** Exibe os produtos/serviços para qualquer visitante, sem necessidade de login.
+- **Autenticação:**
+  - Tela de login com validação local (sem backend).
+  - Armazenamento de token no localStorage após login.
+  - Botão de login visível apenas para usuários não autenticados.
+  - Botão de sair (logout) visível apenas para usuários autenticados.
+  - Logout remove o token e redireciona para a página inicial.
+- **Proteção de Rotas:**
+  - Home, Sobre e Contato só são acessíveis após login (AuthGuard).
+  - Serviços/produtos são acessíveis a todos.
+- **Navegação:**
+  - Header com navegação dinâmica (botões mudam conforme login/logout).
+  - Footer fixo com carrossel de informações (Bootstrap Carousel).
+- **Componentização:**
+  - Componentes para header, footer, login, cadastro, home, sobre, contato, serviços.
+  - Serviço Angular para gerenciamento dos produtos.
+- **Estilização:**
+  - Bootstrap 5 e Bootstrap Icons integrados via `angular.json`.
+  - Layout responsivo e moderno.
+- **Extras:**
+  - Página de cadastro de usuário (simulada).
+  - Carousel do footer com auto-slide e navegação manual.
 
-```bash
-ng serve
-```
+## Como rodar o projeto
+1. Instale as dependências:
+   ```bash
+   npm install
+   ```
+2. Rode o servidor de desenvolvimento:
+   ```bash
+   ng serve
+   ```
+3. Acesse no navegador:
+   [http://localhost:4200](http://localhost:4200)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Estrutura de Pastas
+- `src/app/components/` - Componentes compartilhados (header, footer, login, cadastro)
+- `src/app/pages/` - Páginas principais (sobre, contato, servico)
+- `src/app/home/` - Página Home
+- `src/app/service/` - Serviços Angular (ex: produtos)
+- `src/app/guards/` - Guardas de rota (AuthGuard)
 
-## Code scaffolding
+## Tecnologias Utilizadas
+- Angular 19
+- Bootstrap 5
+- Bootstrap Icons
+- TypeScript
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Observações para o Professor
+- O projeto foi migrado de standalone para NgModule para melhor compatibilidade.
+- O login é simulado (sem backend), apenas para fins didáticos.
+- O código está comentado e organizado para facilitar a leitura e avaliação.
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Desenvolvido por Wellington Oliveira
