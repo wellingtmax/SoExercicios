@@ -1,0 +1,31 @@
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+  <div class="card shadow" style="width: 100%; max-width: 350px;">
+    <div class="card-body">
+      <form [formGroup]="form" (ngSubmit)="enviar()">
+        <div class="mb-3">
+          <label for="email" class="form-label">email:</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-person"></i></span>
+            <input type="text" class="form-control" id="email" formControlName="email" placeholder="Digite seu nome" required>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="senha" class="form-label">Senha:</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-lock"></i></span>
+            <input type="password" class="form-control" id="senha" formControlName="senha" placeholder="Digite sua senha!" required>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success w-100 mb-3" [disabled]="form.invalid">
+          <i class="bi bi-box-arrow-in-right me-2"></i>Entrar
+        </button>
+      </form>
+      <p class="text-center text-danger">{{ mensagem }}</p>
+      <div class="text-center">
+        <h6 class="mb-1">Não tem cadastro?</h6>
+        <a href="cadastro" class="btn btn-link">Clique aqui!</a>
+      </div>
+    </div>
+  </div>
+</div>
+

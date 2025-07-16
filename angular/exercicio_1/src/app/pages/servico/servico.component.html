@@ -1,0 +1,20 @@
+
+<div class="container mt-4 mb-4">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let element of produtos">
+      <div class="card h-100 shadow-sm">
+        <img [src]="element.imagem" class="card-img-top p-3" alt="{{ element.nome }}" style="height: 180px; object-fit: contain;">
+        <div class="card-body">
+          <h5 class="card-title">{{ element.nome }}</h5>
+          <p class="card-text">{{ element.descricao }}</p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <span class="badge bg-success fs-6">R$ {{ element.valor }}</span>
+
+        </div>
+        <button class="btn btn-primary" style="cursor: pointer;"><i class="bi bi-cart4" > Comprar</i></button>
+      </div>
+    </div>
+  </div>
+</div>
+

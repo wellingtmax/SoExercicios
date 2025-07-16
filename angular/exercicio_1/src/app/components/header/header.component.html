@@ -1,0 +1,17 @@
+<div class="bg-dark text-white text-center">
+  <h1>SPA (Single Page Application)</h1>
+  <div *ngIf="!isLoginPage">
+    <div class="m-1 text-end">
+      <ng-container *ngIf="isLoggedIn; else loginOnly">
+        <button class="btn btn-primary m-2" routerLink="home"><i class="bi bi-house m-2"></i>Home</button>
+        <button class="btn btn-primary m-2" routerLink="/sobre"><i class="bi bi-info-circle m-2"></i>Sobre</button>
+        <button class="btn btn-primary m-2" routerLink="/servico"><i class="bi bi-bag m-2"></i>Serviços</button>
+        <button class="btn btn-primary m-2" routerLink="/contato"><i class="bi bi-person-lines-fill m-2"></i>Contato</button>
+        <button class="btn btn-danger m-2" (click)="logout()"><i class="bi bi-box-arrow-right m-2"></i>Sair</button>
+      </ng-container>
+      <ng-template #loginOnly>
+        <button class="btn btn-success m-2" routerLink="/login"><i class="bi bi-person-circle m-2"></i>Login</button>
+      </ng-template>
+    </div>
+  </div>
+</div>
