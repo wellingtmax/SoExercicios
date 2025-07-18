@@ -1,0 +1,18 @@
+<div class="text-center">
+
+
+
+  <h1 class="text-primary">Lista de Produtos</h1>
+
+
+  <button class="btn btn-success" (click)="novo()">Novo Produto</button>
+
+
+  <ul class="">
+    <li *ngFor="let elements of produto">
+      <span>{{elements.nome}}</span>
+      <span>{{elements.preco}}</span>
+    </li>
+  </ul>
+
+</div>
