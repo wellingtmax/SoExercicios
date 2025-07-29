@@ -1,0 +1,44 @@
+-- create database lista;
+-- use lista;
+--                     =========================
+-- create table TabelaA(
+-- 	nome varchar(50)
+-- );
+--                     =========================
+-- create table TabelaB(
+-- 	nome varchar(50)
+-- );
+--                     =========================
+-- insert into TabelaA values('Fernanda');
+-- insert into TabelaA values('Josefa');
+-- insert into TabelaA values('Luiz');
+-- insert into TabelaA values('Fernando');
+-- insert into TabelaA values('wellington');
+-- insert into TabelaA values('GIL');
+-- insert into TabelaA values('farias');
+--                     =========================
+-- insert into TabelaB values('Carlos');
+-- insert into TabelaB values('Manoel');
+-- insert into TabelaB values('Luiz');
+-- insert into TabelaB values('Fernando');
+-- insert into TabelaA values('GIL');
+-- insert into TabelaA values('farias');
+--                     =========================
+-- SELECT a.nome, b.nome FROM 
+-- tabelaA as A 
+-- inner join 
+-- tabelaB as B 
+-- on a.nome = b.nome;
+--                     =========================
+-- SELECT a.nome, b.nome FROM 
+-- tabelaA as A 
+-- left join 
+-- tabelaB as B 
+-- on a.nome = b.nome;
+--                     =========================
+-- SELECT a.nome, b.nome FROM 
+-- tabelaA as A 
+-- right join 
+-- tabelaB as B 
+-- on a.nome = b.nome;
+--                     =========================

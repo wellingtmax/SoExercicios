@@ -1,0 +1,34 @@
+-- ------------------------exercicio 01---------------------------------
+-- select * from jogo 
+-- where genero ='RPG';
+
+-- ------------------------exercicio 02---------------------------------
+-- SELECT * FROM jogador
+-- WHERE nome LIKE 'L%';
+-- ------------------------exercicio 03---------------------------------
+-- SELECT * FROM compra
+-- WHERE valor_pago > 200;
+-- ------------------------exercicio 04---------------------------------
+-- SELECT * FROM jogo
+-- WHERE preco BETWEEN 100 AND 300;
+-- ------------------------exercicio 05---------------------------------
+-- SELECT * FROM jogo
+-- WHERE genero <> 'FPS';
+-- ------------------------exercicio 06---------------------------------
+-- SELECT * FROM jogo
+-- WHERE genero NOT IN ('FPS');
+-- ------------------------exercicio 07---------------------------------
+-- SELECT * FROM jogo
+-- WHERE titulo LIKE '%Impact%';
+-- ------------------------exercicio 08---------------------------------
+-- SELECT * FROM compra
+-- WHERE data_compra BETWEEN '2024-03-01' AND '2024-03-10';
+-- ------------------------exercicio 09---------------------------------
+-- SELECT * FROM jogo
+-- WHERE preco > 0 AND preco <= 250;
+-- ------------------------exercicio 10---------------------------------
+-- SELECT nome, email FROM jogador
+-- WHERE nome LIKE '%a%';
+-- ------------------------exercicio 11---------------------------------
+-- SELECT * FROM jogo
+-- WHERE preco > 100 OR genero = 'Aventura';
