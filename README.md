@@ -6,9 +6,10 @@ Bem-vindo(a) ao meu repositório de estudos! Aqui compartilho minha jornada de a
 ### ====================================================
 ## 📁 Estrutura do Repositório
 
-### / `HTML` / `JavaScript`
-### / `APIs` / `CSS` / `TypeScript` ==>>( conceitos de {
-### / `POO` / `herança` / `abstrato`}) / `Angula` 
+### / `HTML` / `JavaScript`/
+### / `APIs` / `CSS` / 
+### /`TypeScript` ==>>( conceitos dePOO, herança, abstrato) /
+### / `Angula` /
 ### / `DATABASE` ==>>(SELECT,CREATE,INSERT,WHERE,UNION,JOIN,DELETE) /
 ### ===================================================
 
