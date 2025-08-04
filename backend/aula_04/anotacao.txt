@@ -1,0 +1,12 @@
+Ordem das oastas em MVC e funções
+- pasta src/
+    1 - config -> db.js - conexão ao banco de dados
+    2 - repository -> clienteRepository.js - MYSQL direto
+    3 - service -> clienteService.js - Regra de negocios
+    4 - controller -> clienteController.js - controla as entradas e respostas do HTTP
+    5 - routes -> clienteRouters.js - Define as rotas da API
+    6 - src/app.js - Monta app express
+    7 - pasta Raiz do projeto - server.js - Inicia o servidor - porta 3008
+
+
+Banco de dados - oficina Tabela -> cliente
