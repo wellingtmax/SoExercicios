@@ -1,65 +1,94 @@
-# 💻 Repositório de Estudos e Projetos — wellingtmax
+# 💻 Repositório de Estudos e Projetos — **wellingtmax**  
 
-Bem-vindo(a) ao meu repositório de estudos! Aqui compartilho minha jornada de aprendizado em desenvolvimento web, lógica de programação, HTML/CSS, e outros projetos diversos. Este repositório é um portfólio vivo, com desafios, exercícios e experimentos práticos.
+> “A melhor maneira de aprender é praticar.”  
 
----
-### ====================================================
-## 📁 Estrutura do Repositório
-
-### / `HTML` / `JavaScript`/
-### / `APIs` / `CSS` / 
-### /`TypeScript` ==>>( conceitos dePOO, herança, abstrato) /
-### / `Angula` /
-### / `DATABASE` ==>>(SELECT,CREATE,INSERT,WHERE,UNION,JOIN,DELETE) /
-### ===================================================
-
-
-Exercícios básicos de HTML e estruturação de páginas.  
-🛠️ Foco: tags, semântica, listas, tabelas e formulários.  
-📌 Atualizado recentemente com ajustes de caminhos e estrutura de pastas.
-
-### `logicaDeProgrmacao`  
-Exercícios e práticas de lógica de programação.  
-🧠 Foco: algoritmos, condições, repetições, operadores e resolução de problemas.  
-📌 Última atualização: renomeações e melhorias nos exercícios.
-
-### `desafioTV`  
-Desafio temático com foco em estruturação HTML/CSS inspirado em interfaces de TV.  
-🎯 Objetivo: treinar posicionamento e layout responsivo.
-
-### `portfólio`  
-Protótipo do meu portfólio pessoal.  
-🌐 Inclui seções "Sobre mim", "Projetos" e "Contato", com design e layout próprios.  
-🎨 Paleta personalizada e ícones em PNG.
-
-### `icon` / `img`  
-Pastas de imagens e ícones utilizados em projetos diversos.  
-🖼️ Contêm elementos visuais próprios usados nas interfaces.
+![GitHub last commit](https://img.shields.io/github/last-commit/wellingtmax?style=for-the-badge&color=brightgreen)  
+![GitHub repo size](https://img.shields.io/github/repo-size/wellingtmax?style=for-the-badge&color=blue)  
+![GitHub followers](https://img.shields.io/github/followers/wellingtmax?style=for-the-badge&color=yellow)  
+![GitHub stars](https://img.shields.io/github/stars/wellingtmax?style=for-the-badge&color=orange)  
 
 ---
 
-## 🚀 Em Andamento
+## 📚 Objetivo  
 
-- Finalização do portfólio com design responsivo
-- Novos exercícios de lógica e HTML
-- Exploração de estilos CSS modernos
-
----
-
-## 🧠 Sobre mim
-
-Sou estudante de **Análise e Desenvolvimento de Sistemas** com pós-graduação em **Full Stack** e **Engenharia de Software**. Atualmente, também estudo **Educação Física** com foco em desenvolvimento motor. Gosto de unir tecnologia e educação em projetos criativos e funcionais.
+Este repositório é o meu **laboratório de estudos**, onde aplico o que aprendo em **desenvolvimento web, lógica de programação, banco de dados, controle de versão e back-end**.  
+Ele também serve como **registro visual da minha evolução** e portfólio para recrutadores e parceiros de projeto.  
 
 ---
 
-## 📫 Contato
+## 📊 Progresso de Estudos  
 
-Quer trocar uma ideia, colaborar ou dar feedback?
-
-- Email: wellingtmax@example.com
-- LinkedIn: www.linkedin.com/in/wellington-j-oliveira-b431b6b1
-- GitHub: https://github.com/wellingtmax
+| Área de Estudo | Status | Tecnologias/Conceitos |
+|----------------|--------|-----------------------|
+| **HTML/CSS** | ✅ Concluído | HTML5 semântico, Flexbox, Grid, responsividade |
+| **JavaScript** | 🟡 Em andamento | DOM, eventos, funções, async/await |
+| **TypeScript** | 🟡 Em andamento | POO, herança, classes abstratas |
+| **Angular** | 🟡 Em andamento | Componentes, rotas, formulários |
+| **Banco de Dados** | 🟡 Em andamento | SQL (`SELECT`, `JOIN`, `INSERT`, `DELETE`) |
+| **Back-end** | 🟡 Em andamento | Node.js, Express, APIs REST |
+| **APIs** | ✅ Concluído | Consumo e integração |
+| **Git & GitHub** | ✅ Concluído | Controle de versão, branches, merges, pull requests |
+| **Projetos Pessoais** | 🔜 Futuro | Apps práticos e integrações reais |
 
 ---
 
-Obrigado por visitar! ⭐
+## 📂 Estrutura do Repositório  
+
+- **`HTML` / `CSS` / `JavaScript`** → Estruturação, estilos modernos e interatividade  
+- **`APIs`** → Consumo de dados e integração  
+- **`TypeScript`** → POO, tipagem, herança  
+- **`Angular`** → Componentes, rotas, integração back-end  
+- **`DATABASE`** → Comandos SQL essenciais  
+- **`BACKEND`** → Node.js, Express, Nest.js  
+- **`logicaDeProgramacao`** → Algoritmos e operadores  
+- **`desafioTV`** → Layout temático  
+- **`portfólio`** → Protótipo do meu portfólio  
+- **`icon` / `img`** → Recursos visuais  
+
+---
+
+## 🏆 Conquistas no GitHub  
+
+[![trophy](https://github-profile-trophy.vercel.app/?username=wellingtmax&theme=onedark&row=1&column=6)](https://github.com/ryo-ma/github-profile-trophy)  
+
+---
+
+## 📈 Estatísticas do GitHub  
+
+![Wellingtmax's GitHub stats](https://github-readme-stats.vercel.app/api?username=wellingtmax&show_icons=true&theme=radical)  
+
+---
+
+## 📊 Linguagens Mais Usadas  
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=wellingtmax&layout=compact&theme=radical)  
+
+---
+
+## 📅 Gráfico de Contribuições  
+
+![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=wellingtmax&theme=react-dark&hide_border=true&area=true)  
+
+---
+
+## 🔍 Metodologia de Estudo  
+
+📌 **Aprender** → **Aplicar** → **Revisar** → **Aprimorar**  
+
+1. Fundamentos sólidos antes de avançar  
+2. Aprendizado baseado em projetos reais  
+3. Revisão e refatoração de código antigo  
+4. Uso do **Git** para versionar, organizar e compartilhar código  
+
+---
+
+## 📬 Contato  
+
+📧 **Email:** wellingtmax@example.com  
+💼 **LinkedIn:** [wellington-j-oliveira](https://www.linkedin.com/in/wellington-j-oliveira-b431b6b1)  
+🐙 **GitHub:** [wellingtmax](https://github.com/wellingtmax)  
+
+---
+
+⭐ Se este repositório te inspirou, **deixe uma estrela** e acompanhe minha evolução!  
+
