@@ -1,0 +1,39 @@
+Exercício – Backend com MVC + MySQL + CRUD
+
+1. Motivação
+O desenvolvimento de sistemas web modernos exige organização e manutenibilidade do código. Uma forma eficiente 
+de alcançar isso é utilizar o padrão arquitetural MVC. Neste exercício, você desenvolverá uma API RESTful com Node.js 
+que segue esse padrão, conectada a um banco de dados MySQL, utilizando os quatro principais verbos HTTP.
+
+
+2. Situação
+Você foi contratado para desenvolver o backend de um sistema de cadastro de produtos para uma loja de tecnologia. O 
+sistema deverá permitir cadastrar, consultar, atualizar e remover produtos no banco de dados. Para isso, será usado 
+Node.js com o padrão MVC, com estrutura modularizada em controller, service, repository e rotas. A API deverá se 
+conectar a um banco de dados MySQL com a tabela produtos.
+
+
+3. Estratégia
+Você deverá:
+• Criar um banco de dados MySQL chamado loja.
+• Criar uma tabela produtos com os seguintes campos:
+CREATE TABLE produtos (
+ id INT PRIMARY KEY AUTO_INCREMENT,
+ nome VARCHAR(100),
+ preco DECIMAL(10,2),
+ estoque INT
+);
+
+• Criar a seguinte estrutura de diretórios e arquivos:
+• Implementar os 4 verbos HTTP:
+o GET /produtos → listar todos os produtos
+o POST /produtos → cadastrar novo produto
+o PUT /produtos/:id → atualizar um produto
+o DELETE /produtos/:id → remover um produto
+
+
+4. Produto Esperado
+Ao final da atividade, o aluno deverá ter construído uma API funcional com a seguinte capacidade:
+• Conectar-se ao banco loja.
+• Realizar todas as operações CRUD com a tabela produtos.
+• Estruturar o projeto utilizando MVC + Service + Repository
