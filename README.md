@@ -1,65 +1,61 @@
-# 💻 Repositório de Estudos e Projetos — wellingtmax
-
-Bem-vindo(a) ao meu repositório de estudos! Aqui compartilho minha jornada de aprendizado em desenvolvimento web, lógica de programação, HTML/CSS, e outros projetos diversos. Este repositório é um portfólio vivo, com desafios, exercícios e experimentos práticos.
-
----
-### ====================================================
-## 📁 Estrutura do Repositório
-
-### / `HTML` / `JavaScript`/
-### / `APIs` / `CSS` / 
-### /`TypeScript` ==>>( conceitos dePOO, herança, abstrato) /
-### / `Angula` /
-### / `DATABASE` ==>>(SELECT,CREATE,INSERT,WHERE,UNION,JOIN,DELETE) /
-### ===================================================
+💻 Repositório de Estudos e Projetos — wellingtmax
+“A melhor maneira de aprender é praticar.”
 
 
-Exercícios básicos de HTML e estruturação de páginas.  
-🛠️ Foco: tags, semântica, listas, tabelas e formulários.  
-📌 Atualizado recentemente com ajustes de caminhos e estrutura de pastas.
 
-### `logicaDeProgrmacao`  
-Exercícios e práticas de lógica de programação.  
-🧠 Foco: algoritmos, condições, repetições, operadores e resolução de problemas.  
-📌 Última atualização: renomeações e melhorias nos exercícios.
 
-### `desafioTV`  
-Desafio temático com foco em estruturação HTML/CSS inspirado em interfaces de TV.  
-🎯 Objetivo: treinar posicionamento e layout responsivo.
 
-### `portfólio`  
-Protótipo do meu portfólio pessoal.  
-🌐 Inclui seções "Sobre mim", "Projetos" e "Contato", com design e layout próprios.  
-🎨 Paleta personalizada e ícones em PNG.
+📚 Objetivo
+Este repositório é o meu laboratório de estudos, onde aplico o que aprendo em desenvolvimento web, lógica de programação, banco de dados, controle de versão e back-end.
+Ele também serve como registro visual da minha evolução e portfólio para recrutadores e parceiros de projeto.
 
-### `icon` / `img`  
-Pastas de imagens e ícones utilizados em projetos diversos.  
-🖼️ Contêm elementos visuais próprios usados nas interfaces.
+📊 Progresso de Estudos
+Área de Estudo	Status	Tecnologias/Conceitos
+HTML/CSS	✅ Concluído (Fundamentos)	HTML5 semântico, Flexbox, Grid, responsividade
+JavaScript	🟡 Em andamento	DOM, eventos, funções, async/await
+TypeScript	🟡 Em andamento	POO, herança, classes abstratas
+Angular	🟡 Em andamento	Componentes, rotas, formulários
+Banco de Dados	🟡 Em andamento	SQL (SELECT, JOIN, INSERT, DELETE)
+Back-end	🟡 Em andamento	Node.js, Express, APIs REST
+APIs	✅ Concluído (Básico)	Consumo e integração
+Git & GitHub	✅ Concluído (Básico ao Intermediário)	Controle de versão, branches, merges, pull requests
+Projetos Pessoais	🔜 Futuro	Apps práticos e integrações reais
 
----
+📂 Estrutura do Repositório
+HTML / CSS / JavaScript → Estruturação, estilos modernos e interatividade
 
-## 🚀 Em Andamento
+APIs → Consumo de dados e integração
 
-- Finalização do portfólio com design responsivo
-- Novos exercícios de lógica e HTML
-- Exploração de estilos CSS modernos
+TypeScript → POO, tipagem, herança
 
----
+Angular → Componentes, rotas, integração back-end
 
-## 🧠 Sobre mim
+DATABASE → Comandos SQL essenciais
 
-Sou estudante de **Análise e Desenvolvimento de Sistemas** com pós-graduação em **Full Stack** e **Engenharia de Software**. Atualmente, também estudo **Educação Física** com foco em desenvolvimento motor. Gosto de unir tecnologia e educação em projetos criativos e funcionais.
+BACKEND → Node.js, Express, Nest.js
 
----
+logicaDeProgramacao → Algoritmos e operadores
 
-## 📫 Contato
+desafioTV → Layout temático
 
-Quer trocar uma ideia, colaborar ou dar feedback?
+portfólio → Protótipo do meu portfólio
 
-- Email: wellingtmax@example.com
-- LinkedIn: www.linkedin.com/in/wellington-j-oliveira-b431b6b1
-- GitHub: https://github.com/wellingtmax
+icon / img → Recursos visuais
 
----
+🔍 Metodologia de Estudo
+📌 Aprender → Aplicar → Revisar → Aprimorar
 
-Obrigado por visitar! ⭐
+Fundamentos sólidos antes de avançar
+
+Aprendizado baseado em projetos reais
+
+Revisão e refatoração de código antigo
+
+Uso do Git para versionar, organizar e compartilhar código
+
+📬 Contato
+📧 Email: wellingtmax@example.com
+💼 LinkedIn: wellington-j-oliveira
+🐙 GitHub: wellingtmax
+
+⭐ Se este repositório te inspirou, deixe uma estrela e acompanhe minha evolução!
