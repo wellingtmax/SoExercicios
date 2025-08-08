@@ -1,6 +1,6 @@
 # 💻 Repositório de Estudos e Projetos — **wellingtmax**  
 
-> “A melhor maneira de aprender é praticar.”  
+<!-- > “A melhor maneira de aprender é praticar.”   -->
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/wellingtmax?style=for-the-badge&color=brightgreen)  
 ![GitHub repo size](https://img.shields.io/github/repo-size/wellingtmax?style=for-the-badge&color=blue)  
