@@ -1,0 +1,124 @@
+.container{
+  background: whitesmoke;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  width: 100% ;
+}
+
+form{
+  padding: 10px;
+  margin: 10px;
+}
+
+.input-group{
+  padding: 5px;
+  margin: 5px;
+}
+
+.button-group{
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  width: 100%;
+}
+
+.btn{
+  background: blue;
+  color: white;
+  border: none;
+  padding: 7px;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &:disabled{
+    background: gray;
+    cursor: not-allowed;
+  }
+}
+
+.btn-primary{
+  background: #007bff;
+  &:hover{
+    background: #0557aff1;
+  }
+}
+
+.btn-secondary{
+  background: #6c757d;
+  &:hover{
+    background: #265075;
+  }
+}
+
+.btn-warning{
+  background: #ffc107;
+  color: black;
+  &:hover{
+    background: #e7c322;
+  }
+}
+
+.btn-danger{
+  background: #dc3545;
+  &:hover{
+    background: #ff0019;
+  }
+}
+
+.btn-info{
+  background: #17a2b8;
+   &:hover{
+    background: #125e69e5;
+  }
+}
+
+.btn-sm{
+  padding: 4px 8px;
+  font-size: 12px;
+  margin: 2px;
+}
+
+#email, #nome, #id{
+  border: none;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  border-bottom: solid 1px black;
+  width: 100%;
+
+  &:hover{
+    background: rgba(255, 255, 255, 0);
+  }
+
+  &:focus{
+    outline: none;
+    border-bottom: solid 2px blue;
+  }
+}
+
+.table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th, .table td{
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th{
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: blue;
+}
+
+.table tr:nth-child(even){
+  background-color: #f9f9f9;
+}
+
+.table tr:hover{
+  background-color: #f5f5f5;
+}

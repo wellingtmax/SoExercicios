@@ -2,9 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 require('dotenv').config();
-
-// Importar o banco de dados
-const db = require('./db');
+// Inicializar conexão com o banco de dados
+require('./db');
 // Importar as rotas
 const userRoutes = require('./routes/userRoutes');
 // Criar uma instância do Express
@@ -49,7 +48,7 @@ app.use((err, req, res, next) => {
 const PORT = process.env.PORT || 3000;
 // Iniciar o servidor
 app.listen(PORT, () => {
-  console.log(`🚀 Servidor rodando na porta ${PORT}`);
-  console.log(`📍 URL: http://localhost:${PORT}`);
-  console.log(`📊 Ambiente: ${process.env.NODE_ENV || 'development'}`);
+  console.log(`🚀🚀🚀 Servidor rodando na porta ${PORT}`);
+  console.log(`📍📍📍 URL: http://localhost:${PORT}`);
+  console.log(`📊📊📊 Ambiente: ${process.env.NODE_ENV || 'development'}`);
 });
