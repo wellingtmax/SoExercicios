@@ -1,0 +1,41 @@
+.hea{
+    display: flex;
+    background: repeating-linear-gradient(rgba(17, 0, 255, 0.822), black);
+    padding: 20px;
+}
+h1{
+    width: 100%;
+}
+.na{
+    gap: 10px;
+    font-weight: bold;
+    width: 60%;
+    text-align: end;
+}
+.na a{
+    text-decoration: none;
+    border-radius: 2px;
+    padding: 5px;
+    color: white;
+    &:hover{
+        text-decoration: underline;
+        color: blueviolet;
+    }
+}
+
+footer{
+    text-align: center;
+}
+
+.tst{
+    
+    border-bottom: 3px solid green;
+}
+
+#container{
+    text-align: center;
+}
+.fw-bold{
+    width: 100%;
+    text-align: center;
+}
