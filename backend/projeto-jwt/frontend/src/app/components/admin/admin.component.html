@@ -1,0 +1,79 @@
+<div class="admin-container">
+  <header class="admin-header">
+    <h1>Painel Administrativo</h1>
+    <div class="user-info">
+      <span *ngIf="currentUser">Bem-vindo, {{ currentUser.login }}!</span>
+      <button class="btn-logout" (click)="logout()">Sair</button>
+    </div>
+  </header>
+
+  <main class="admin-content">
+    <div class="dashboard-grid">
+      <div class="dashboard-card">
+        <div class="card-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="card-content">
+          <h3>Gerenciar Usuários</h3>
+          <p>Visualizar e gerenciar todos os usuários do sistema</p>
+          <button class="btn-action">Acessar</button>
+        </div>
+      </div>
+
+      <div class="dashboard-card">
+        <div class="card-icon">
+          <i class="fas fa-chart-bar"></i>
+        </div>
+        <div class="card-content">
+          <h3>Relatórios</h3>
+          <p>Visualizar estatísticas e relatórios do sistema</p>
+          <button class="btn-action">Acessar</button>
+        </div>
+      </div>
+
+      <div class="dashboard-card">
+        <div class="card-icon">
+          <i class="fas fa-cog"></i>
+        </div>
+        <div class="card-content">
+          <h3>Configurações</h3>
+          <p>Configurar parâmetros gerais do sistema</p>
+          <button class="btn-action">Acessar</button>
+        </div>
+      </div>
+
+      <div class="dashboard-card">
+        <div class="card-icon">
+          <i class="fas fa-home"></i>
+        </div>
+        <div class="card-content">
+          <h3>Área Home</h3>
+          <p>Acessar a área compartilhada do sistema</p>
+          <button class="btn-action" (click)="goToHome()">Acessar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="admin-stats">
+      <h2>Estatísticas Rápidas</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">150</span>
+          <span class="stat-label">Total de Usuários</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">25</span>
+          <span class="stat-label">Usuários Online</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">10</span>
+          <span class="stat-label">Administradores</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">99.5%</span>
+          <span class="stat-label">Uptime</span>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

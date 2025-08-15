@@ -1,0 +1,84 @@
+<div class="user-container">
+  <header class="user-header">
+    <h1>Painel do Usuário</h1>
+    <div class="user-info">
+      <span *ngIf="currentUser">Bem-vindo, {{ currentUser.login }}!</span>
+      <button class="btn-logout" (click)="logout()">Sair</button>
+    </div>
+  </header>
+
+  <main class="user-content">
+    <div class="welcome-section">
+      <h2>Bem-vindo ao seu painel pessoal!</h2>
+      <p>Aqui você pode acessar suas funcionalidades e informações.</p>
+    </div>
+
+    <div class="dashboard-grid">
+      <div class="dashboard-card">
+        <div class="card-icon">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="card-content">
+          <h3>Meu Perfil</h3>
+          <p>Visualizar e editar suas informações pessoais</p>
+          <button class="btn-action">Acessar</button>
+        </div>
+      </div>
+
+      <div class="dashboard-card">
+        <div class="card-icon">
+          <i class="fas fa-file-alt"></i>
+        </div>
+        <div class="card-content">
+          <h3>Meus Documentos</h3>
+          <p>Gerenciar seus documentos e arquivos</p>
+          <button class="btn-action">Acessar</button>
+        </div>
+      </div>
+
+      <div class="dashboard-card">
+        <div class="card-icon">
+          <i class="fas fa-bell"></i>
+        </div>
+        <div class="card-content">
+          <h3>Notificações</h3>
+          <p>Visualizar suas notificações e alertas</p>
+          <button class="btn-action">Acessar</button>
+        </div>
+      </div>
+
+      <div class="dashboard-card">
+        <div class="card-icon">
+          <i class="fas fa-home"></i>
+        </div>
+        <div class="card-content">
+          <h3>Área Home</h3>
+          <p>Acessar a área compartilhada do sistema</p>
+          <button class="btn-action" (click)="goToHome()">Acessar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="user-stats">
+      <h2>Suas Estatísticas</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">24</span>
+          <span class="stat-label">Documentos</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">5</span>
+          <span class="stat-label">Notificações</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">15</span>
+          <span class="stat-label">Dias de Uso</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Perfil Completo</span>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

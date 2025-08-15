@@ -1,0 +1,49 @@
+<div class="login-container">
+  <div class="login-card">
+    <h2>Sistema de Login</h2>
+
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="login">Login:</label>
+        <input
+          class="inputs"
+          type="text"
+          id="login"
+          name="login"
+          [(ngModel)]="login"
+          placeholder="Digite seu login"
+          required
+          [disabled]="isLoading">
+      </div>
+
+      <div class="form-group">
+        <label for="senha">Senha:</label>
+        <input
+          class="inputs"
+          type="password"
+          id="senha"
+          name="senha"
+          [(ngModel)]="senha"
+          placeholder="Digite sua senha"
+          required
+          [disabled]="isLoading">
+      </div>
+
+      <button
+        type="submit"
+        [disabled]="isLoading || !loginForm.valid"
+        class="btn-login">
+        <span *ngIf="isLoading">Entrando...</span>
+        <span *ngIf="!isLoading">Entrar</span>
+      </button>
+    </form>
+
+    <p class="erro" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+    <div class="info-box">
+      <h4>Usuários de Teste:</h4>
+      <p><strong> login: </strong>admin, senha: admin123</p>
+      <p><strong> login:</strong> wellington, senha: user123</p>
+    </div>
+  </div>
+</div>

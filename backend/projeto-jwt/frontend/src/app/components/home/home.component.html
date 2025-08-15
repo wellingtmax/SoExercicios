@@ -1,0 +1,115 @@
+<div class="home-container">
+  <header class="home-header">
+    <h1>Área Home - Sistema Compartilhado</h1>
+    <div class="header-actions">
+      <span *ngIf="currentUser" class="user-info">
+        {{ currentUser.login }}
+        <span class="user-role" [class.admin]="isAdmin" [class.user]="!isAdmin">
+          ({{ isAdmin ? 'Admin' : 'User' }})
+        </span>
+      </span>
+      <button class="btn-back" (click)="goBack()">
+        Voltar ao {{ isAdmin ? 'Painel Admin' : 'Painel Usuário' }}
+      </button>
+      <button class="btn-logout" (click)="logout()">Sair</button>
+    </div>
+  </header>
+
+  <main class="home-content">
+    <div class="welcome-banner">
+      <h2>Bem-vindo à Área Compartilhada!</h2>
+      <p>Esta é uma área acessível tanto para administradores quanto para usuários do sistema.</p>
+    </div>
+
+    <div class="content-grid">
+      <div class="content-section">
+        <div class="section-icon">
+          <i class="fas fa-newspaper"></i>
+        </div>
+        <h3>Notícias e Atualizações</h3>
+        <div class="news-list">
+          <div class="news-item">
+            <h4>Nova Funcionalidade Lançada</h4>
+            <p>Implementamos um novo sistema de notificações em tempo real.</p>
+            <span class="news-date">15/08/2025</span>
+          </div>
+          <div class="news-item">
+            <h4>Manutenção Programada</h4>
+            <p>O sistema passará por manutenção no próximo domingo das 2h às 6h.</p>
+            <span class="news-date">14/08/2025</span>
+          </div>
+          <div class="news-item">
+            <h4>Atualização de Segurança</h4>
+            <p>Implementamos novas medidas de segurança para proteger seus dados.</p>
+            <span class="news-date">13/08/2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <div class="section-icon">
+          <i class="fas fa-calendar"></i>
+        </div>
+        <h3>Agenda de Eventos</h3>
+        <div class="events-list">
+          <div class="event-item">
+            <div class="event-date">
+              <span class="day">20</span>
+              <span class="month">AGO</span>
+            </div>
+            <div class="event-content">
+              <h4>Treinamento Sistema</h4>
+              <p>Treinamento sobre as novas funcionalidades</p>
+            </div>
+          </div>
+          <div class="event-item">
+            <div class="event-date">
+              <span class="day">25</span>
+              <span class="month">AGO</span>
+            </div>
+            <div class="event-content">
+              <h4>Reunião Geral</h4>
+              <p>Reunião mensal com toda a equipe</p>
+            </div>
+          </div>
+          <div class="event-item">
+            <div class="event-date">
+              <span class="day">30</span>
+              <span class="month">AGO</span>
+            </div>
+            <div class="event-content">
+              <h4>Workshop Tecnologia</h4>
+              <p>Workshop sobre novas tecnologias</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="system-info">
+      <h2>Informações do Sistema</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <i class="fas fa-server"></i>
+          <h4>Status do Servidor</h4>
+          <p class="status online">Online</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-database"></i>
+          <h4>Banco de Dados</h4>
+          <p class="status online">Conectado</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-shield-alt"></i>
+          <h4>Segurança</h4>
+          <p class="status online">Ativa</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-clock"></i>
+          <h4>Última Atualização</h4>
+          <p>15/08/2025 14:30</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
