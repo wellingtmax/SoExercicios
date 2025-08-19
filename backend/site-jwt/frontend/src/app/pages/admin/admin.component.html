@@ -1,0 +1,53 @@
+<div class="admin-container">
+  <header class="admin-header">
+    <h1>Área Administrativa</h1>
+    <button class="btn-logout" (click)="logout()">Sair</button>
+  </header>
+
+  <div class="admin-content">
+    <div class="user-info" *ngIf="user">
+      <h2>Informações do Usuário</h2>
+      <p><strong>ID:</strong> {{ user.userId }}</p>
+      <p><strong>Perfil:</strong> {{ user.perfil }}</p>
+    </div>
+
+    <div class="protected-data">
+      <h2>Dados da Rota Protegida</h2>
+      <div *ngIf="loading" class="loading">Carregando...</div>
+      <div *ngIf="!loading && protectedData" class="data-box">
+        <p><strong>Mensagem:</strong> {{ protectedData.message }}</p>
+        <div *ngIf="protectedData.user">
+          <h3>🔐 Como a Senha vira um Token JWT</h3>
+          <div class="token-explanation">
+            <div class="step">
+              <h4>1️⃣ Dados do Usuário Decodificados:</h4>
+              <p>Estes são os dados que estavam <strong>dentro</strong> do token JWT:</p>
+              <pre class="user-data">{{ protectedData.user | json }}</pre>
+            </div>
+
+            <div class="step">
+              <h4>2️⃣ Processo de Autenticação:</h4>
+              <p>🔹 <strong>Login:</strong> Você digitou sua senha</p>
+              <p>🔹 <strong>Verificação:</strong> Servidor comparou com senha criptografada (bcrypt)</p>
+              <p>🔹 <strong>Geração:</strong> Se válida, criou este token JWT</p>
+              <p>🔹 <strong>Armazenamento:</strong> Token salvo no localStorage do navegador</p>
+              <p>🔹 <strong>Uso:</strong> Token enviado automaticamente em cada requisição</p>
+            </div>
+
+            <div class="step" *ngIf="protectedData.token">
+              <h4>3️⃣ Token JWT Completo:</h4>
+              <p>Este é o token real que está sendo usado para autenticar você:</p>
+              <pre class="token-data">{{ protectedData.token }}</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn-primary" (click)="loadProtectedData()">
+        Recarregar Dados
+      </button>
+    </div>
+  </div>
+</div>

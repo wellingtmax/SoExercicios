@@ -1,0 +1,80 @@
+<div class="register-container">
+  <div class="register-card">
+    <h2>Criar Conta</h2>
+
+    <form (ngSubmit)="onRegister()" #registerForm="ngForm">
+      <div class="form-group">
+        <label for="usuario">Usuário:</label>
+        <input
+          type="text"
+          id="usuario"
+          name="usuario"
+          [(ngModel)]="registerData.usuario"
+          required
+          minlength="3"
+          class="form-control"
+          placeholder="Digite seu usuário">
+      </div>
+
+      <div class="form-group">
+        <label for="perfil">Perfil:</label>
+        <select
+          id="perfil"
+          name="perfil"
+          [(ngModel)]="registerData.perfil"
+          required
+          class="form-control">
+          <option value="user">Usuario</option>
+          <option value="administrativo">Administrativo</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="senha">Senha:</label>
+        <input
+          type="password"
+          id="senha"
+          name="senha"
+          [(ngModel)]="registerData.senha"
+          required
+          minlength="3"
+          class="form-control"
+          placeholder="Digite sua senha">
+      </div>
+
+      <div class="form-group">
+        <label for="confirmarSenha">Confirmar Senha:</label>
+        <input
+          type="password"
+          id="confirmarSenha"
+          name="confirmarSenha"
+          [(ngModel)]="registerData.confirmarSenha"
+          required
+          class="form-control"
+          placeholder="Confirme sua senha">
+      </div>
+
+      <div class="success-message" *ngIf="successMessage">
+        ✅ {{ successMessage }}
+      </div>
+
+      <div class="error-message" *ngIf="errorMessage">
+        ❌ {{ errorMessage }}
+      </div>
+
+      <button
+        type="submit"
+        class="btn-register"
+        [disabled]="loading || registerForm.invalid">
+        <span *ngIf="loading">Registrando...</span>
+        <span *ngIf="!loading">Criar Conta</span>
+      </button>
+    </form>
+
+    <div class="login-link">
+      <p>Já tem conta?
+        <a (click)="goToLogin()">Faça login aqui</a>
+      </p>
+    </div>
+  </div>
+</div>

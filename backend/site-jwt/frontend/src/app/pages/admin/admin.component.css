@@ -1,0 +1,151 @@
+.admin-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-header h1 {
+  color: #333;
+  margin: 0;
+}
+
+.btn-logout {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-logout:hover {
+  background-color: #c82333;
+}
+
+.admin-content {
+  display: grid;
+  gap: 2rem;
+}
+
+.user-info, .protected-data {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-info h2, .protected-data h2 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.user-info p {
+  margin: 0.5rem 0;
+}
+
+.loading {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.data-box {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.data-box h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.data-box pre {
+  background-color: #e9ecef;
+  padding: 0.5rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 0.875rem;
+}
+
+.actions {
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para explicação do token */
+.token-explanation {
+  margin-top: 1rem;
+}
+
+.step {
+  background-color: #f8f9fa;
+  border-left: 4px solid #007bff;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.step h4 {
+  margin: 0 0 0.5rem 0;
+  color: #007bff;
+  font-size: 1.1rem;
+}
+
+.step p {
+  margin: 0.25rem 0;
+  color: #555;
+}
+
+.user-data {
+  background-color: #d4edda !important;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  padding: 0.75rem !important;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+.token-data {
+  background-color: #fff3cd !important;
+  border: 1px solid #ffeaa7;
+  color: #856404;
+  padding: 0.75rem !important;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  overflow-x: auto;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
