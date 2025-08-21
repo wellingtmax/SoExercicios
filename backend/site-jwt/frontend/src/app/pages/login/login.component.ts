@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+import { AlertsService } from '../../services/alerts.service';
 
 @Component({
   selector: 'app-login',
@@ -24,9 +25,12 @@ export class LoginComponent {
     private router: Router
   ) {}
 
+  alertsService = inject(AlertsService);
+
   onLogin(): void {
     if (!this.loginData.usuario || !this.loginData.senha) {
-      this.errorMessage = 'Preencha todos os campos';
+      this.alertsService.addTemporalAlert('Usuário ou senha inválidos', 'error', 3000);
+      this.loading = false;
       return;
     }
 
@@ -36,11 +40,16 @@ export class LoginComponent {
     this.authService.login(this.loginData).subscribe({
       next: (response) => {
         console.log('Login realizado com sucesso:', response);
-        this.router.navigate(['/admin']);
+
+        // Redirecionar baseado no perfil do usuário
+        if (response.user.perfil === 'admin' || response.user.perfil === 'administrativo') {
+          this.router.navigate(['/admin']);
+        } else {
+          this.router.navigate(['/user']);
+        }
       },
-      error: (error) => {
-        console.error('Erro no login:', error);
-        this.errorMessage = error.error?.message || 'Erro ao fazer login';
+      error: (err) => {
+        this.alertsService.addTemporalAlert('Usuário ou senha inválidos', 'error', 5000);
         this.loading = false;
       }
     });
@@ -48,5 +57,8 @@ export class LoginComponent {
 
   goToRegister(): void {
     this.router.navigate(['/register']);
+  }
+  goToHome(): void {
+    this.router.navigate(['/home']);
   }
 }

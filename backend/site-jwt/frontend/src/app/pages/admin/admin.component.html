@@ -6,9 +6,10 @@
 
   <div class="admin-content">
     <div class="user-info" *ngIf="user">
-      <h2>Informações do Usuário</h2>
+      <h2>Informações do ADM: {{ user.usuario }}!</h2>
       <p><strong>ID:</strong> {{ user.userId }}</p>
       <p><strong>Perfil:</strong> {{ user.perfil }}</p>
+      <p >Acesso autorizado em: <em class="relogio">{{ dataHora | date:'dd/MM/yyyy HH:mm:ss' }}</em></p>
     </div>
 
     <div class="protected-data">
@@ -37,7 +38,7 @@
             <div class="step" *ngIf="protectedData.token">
               <h4>3️⃣ Token JWT Completo:</h4>
               <p>Este é o token real que está sendo usado para autenticar você:</p>
-              <pre class="token-data">{{ protectedData.token }}</pre>
+              <pre class="  ">{{ protectedData.token }}</pre>
             </div>
           </div>
         </div>

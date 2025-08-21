@@ -27,10 +27,6 @@
           placeholder="Digite sua senha">
       </div>
 
-      <div class="error-message" *ngIf="errorMessage">
-        {{ errorMessage }}
-      </div>
-
       <button
         type="submit"
         class="btn-login"
@@ -43,6 +39,9 @@
     <div class="register-link">
       <p>Não tem conta?
         <a (click)="goToRegister()">Registre-se aqui</a>
+      </p>
+      <p>Voltar para Home?
+        <a (click)="goToHome()">Click Aqui!</a>
       </p>
     </div>
   </div>

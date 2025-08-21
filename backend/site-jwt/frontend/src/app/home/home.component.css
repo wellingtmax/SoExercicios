@@ -1,0 +1,30 @@
+:host {
+  display: block;
+  height: 97vh;
+  background: linear-gradient(to right, #000000a2, #3c68e071);
+  background-size: cover;
+}
+
+.he{
+  background: linear-gradient(rgba(0, 0, 255, 0.493), rgba(0, 0, 0, 0.822));
+  justify-items: center;
+}
+.he h1{
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.divButon{
+  width: 90%;
+  margin: 10px;
+}
+button{
+  padding: 10px;
+  color: white;
+  margin: 10px;
+  background: rgb(8, 59, 224);
+  width: 100%;
+  &:hover{
+    background: rgba(4, 4, 224, 0.589);
+  }
+}

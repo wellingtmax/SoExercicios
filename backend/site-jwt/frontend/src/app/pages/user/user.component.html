@@ -1,1 +1,43 @@
-<p>user works!</p>
+<div class="user-container">
+  <header class="user-header">
+    <h1>Área do Usuário</h1>
+    <button class="btn-logout" (click)="logout()">Sair</button>
+  </header>
+
+  <div class="user-content">
+    <div class="welcome-card" *ngIf="user">
+      <h2>Bem-vindo, {{ user.usuario }}!</h2>
+      <p>Perfil: {{ user.perfil }}</p>
+      <p>ID: {{ user.id }}</p>
+    </div>
+
+    <div class="protected-data-card" *ngIf="protectedData && !loading">
+      <h3>Dados Protegidos</h3>
+      <p>{{ protectedData.message }}</p>
+      <p >Acesso autorizado em: <em class="relogio">{{ dataHora | date:'dd/MM/yyyy HH:mm:ss' }}</em></p>
+    </div>
+
+    <div class="loading" *ngIf="loading">
+      <p>Carregando dados...</p>
+    </div>
+    <div class="step protected-data-card">
+      <h4>1️⃣ Dados do Usuário Decodificados:</h4>
+      <p>Estes são os dados que estavam <strong>dentro</strong> do token JWT:</p>
+      <pre class="user-data">{{ protectedData.user | json }}</pre>
+    </div>
+    <div class="step protected-data-card" *ngIf="protectedData.token">
+      <h4>3️⃣ Token JWT Completo:</h4>
+      <p>Este é o token real que está sendo usado para autenticar você:</p>
+      <pre class="token-data">{{ protectedData.token }}</pre>
+    </div>
+
+    <div class="user-actions">
+      <h3>Ações Disponíveis</h3>
+      <div class="action-buttons">
+        <button class="btn-action">Meu Perfil</button>
+        <button class="btn-action">Configurações</button>
+        <button class="btn-action">Histórico</button>
+      </div>
+    </div>
+  </div>
+</div>

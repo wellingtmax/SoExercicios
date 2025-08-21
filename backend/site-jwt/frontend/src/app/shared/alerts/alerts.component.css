@@ -1,0 +1,264 @@
+.container-alerts {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.alert {
+  position: relative;
+  padding: 20px 30px;
+  background-color: #2134dd; /* fundo da div */
+  color: #ffffff;
+  border-radius: 10px;
+  font-weight: bold;
+  width: 250px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  animation: alertSlideIn 0.5s ease-out;
+}
+
+/* Borda animada rotativa usando pseudo-elemento */
+.alert::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  border-radius: 13px;
+  background: conic-gradient(
+    from 0deg,
+    #ff6b6b,
+    #4ecdc4,
+    #45b7d1,
+    #96ceb4,
+    #ffeaa7,
+    #dda0dd,
+    #ff6b6b
+  );
+  z-index: -2;
+  animation: rotateBorder 2s linear infinite;
+}
+
+/* Máscara interna para manter o fundo da div visível */
+.alert::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  background-color: #2134dd;
+  border-radius: 7px;
+  z-index: -1;
+}
+
+/* Conteúdo do alerta */
+.alert-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.alert-icon {
+  font-size: 20px;
+  animation: iconPulse 1.5s ease-in-out infinite;
+}
+
+.alert-message {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.alert-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  margin-left: 10px;
+}
+
+.alert-close:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Barra de progresso para countdown */
+.alert-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 0 0 10px 10px;
+  z-index: 1;
+  animation: progressBar linear;
+}
+
+/* Animações */
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes alertSlideIn {
+  from {
+    transform: translateX(100%) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes alertSlideOut {
+  from {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%) scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes progressBar {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+/* Efeito de saída */
+.alert.alert-exit {
+  animation: alertSlideOut 0.3s ease-in forwards;
+}
+
+/* Tipos de alerta com cores diferentes */
+.alert.alert-success {
+  background-color: #28a745;
+}
+
+.alert.alert-success::after {
+  background-color: #28a745;
+}
+
+.alert.alert-success::before {
+  background: conic-gradient(
+    from 0deg,
+    #90ee90,
+    #32cd32,
+    #00ff00,
+    #adff2f,
+    #7cfc00,
+    #9acd32,
+    #90ee90
+  );
+}
+
+.alert.alert-error {
+  background-color: #dc3545;
+}
+
+.alert.alert-error::after {
+  background-color: #dc3545;
+}
+
+.alert.alert-error::before {
+  background: conic-gradient(
+    from 0deg,
+    #ff6b6b,
+    #ff4757,
+    #ff3742,
+    #ff6348,
+    #ff5252,
+    #ff1744,
+    #ff6b6b
+  );
+  animation: rotateBorder 1.5s linear infinite;
+}
+
+.alert.alert-warning {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.alert.alert-warning::after {
+  background-color: #ffc107;
+}
+
+.alert.alert-warning::before {
+  background: conic-gradient(
+    from 0deg,
+    #ffd700,
+    #ffb347,
+    #ffa500,
+    #ff8c00,
+    #ffdf00,
+    #ffea00,
+    #ffd700
+  );
+}
+
+.alert.alert-info {
+  background-color: #17a2b8;
+}
+
+.alert.alert-info::after {
+  background-color: #17a2b8;
+}
+
+.alert.alert-info::before {
+  background: conic-gradient(
+    from 0deg,
+    #87ceeb,
+    #4682b4,
+    #1e90ff,
+    #00bfff,
+    #87cefa,
+    #b0e0e6,
+    #87ceeb
+  );
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container-alerts {
+    top: 5px;
+    right: 5px;
+    left: 5px;
+  }
+
+  .alert {
+    width: 100%;
+    padding: 15px 20px;
+  }
+}
+

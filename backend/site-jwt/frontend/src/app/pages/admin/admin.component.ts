@@ -13,6 +13,7 @@ export class AdminComponent implements OnInit {
   user: any = null;
   protectedData: any = null;
   loading = false;
+  dataHora: Date = new Date();
 
   constructor(
     private authService: AuthService,
@@ -22,6 +23,10 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void {
     this.user = this.authService.getCurrentUser();
     this.loadProtectedData();
+
+    setInterval(() => {
+      this.dataHora = new Date();
+    }, 1000);
   }
 
   loadProtectedData(): void {
@@ -40,6 +45,10 @@ export class AdminComponent implements OnInit {
 
   logout(): void {
     this.authService.logout();
-    this.router.navigate(['/login']);
+    if (confirm('Você tem certeza que deseja sair?')) {
+      setTimeout(() => {
+        this.router.navigate(['/home']);
+      }, 1000);
+    }
   }
 }

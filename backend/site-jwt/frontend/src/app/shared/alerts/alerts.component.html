@@ -1,0 +1,23 @@
+<div class="container-alerts">
+@for (alert of alertsService.alerts; track alert.id; let i = $index) {
+    <div class="alert" [ngClass]="'alert-' + alert.type">
+      <div class="alert-content">
+        <span class="alert-icon">
+          @switch (alert.type) {
+            @case ('success') { ✓ }
+            @case ('error') { ✗ }
+            @case ('warning') { ⚠ }
+            @case ('info') { ℹ }
+            @default { ℹ }
+          }
+        </span>
+        <span class="alert-message">{{ alert.message }}</span>
+        <button class="alert-close" (click)="alertsService.removeAlert(alert.id)">×</button>
+      </div>
+      <div
+        class="alert-progress"
+        [style.animation-duration]="alert.duration + 'ms'"
+      ></div>
+    </div>
+}
+</div>
